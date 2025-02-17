@@ -113,7 +113,7 @@
     </div>
 
 
-    <!-- tabs with image  pinl section-->
+    <!-- tabs with image  pink section-->
     <div class="tabs-container flex padding-bottom-20">
         <h2 class="uppercase pink padding-bottom-20">best sellers</h2>
         <div class="tabs-blocks flex">
@@ -149,13 +149,18 @@
 
     <!-- image and text moving section -->
     <div class="game-card margin-top-20  padding-top-10">
-        <div class="moving_text">
-            <img src="./images/play_for_free.png" alt="play for free text banner" />
-            <img src="./images/play_for_free.png" alt="play for free text banner" />
-
-            <img src="./images/play_for_free.png" alt="play for free text banner" />
-            <img src="./images/play_for_free.png" alt="play for free text banner" />
-        </div>
+        <div class="scroller" data-direction="right" data-speed="slow">
+            <div class="scroller__inner">
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+                <img src="./images/play_for_free.png" alt="play_for_free"/>
+            </div>
+          </div>
         <div class="flex lunch_box_info">
             <div class="game-image">
                 <img src="./images/lunch_box.png" alt="Lunchbox Shuffle" class="image_banner" />
@@ -185,7 +190,7 @@
                         Enter your email and we'll send you KidMin ideas, special offers,
                         and FREE children's video downloads throughout the month.
                     </p>
-                    <!-- input button -->
+                    <!--  input button -->
                     <div class="input_button email_input  padding-bottom-20">
                         <input type="email" name="Enter your email address" value="Enter your email address"
                             class="email_logo" />
@@ -193,7 +198,10 @@
                     <button class="primary_button  padding-top-10">Play Now</button>
                 </div>
             </div>
-        </div>
+        </div> 
+
+
+
             <!-- 
     tabs with image 2 -->
     <div class="tabs-container   flex padding-bottom-20">
@@ -301,7 +309,7 @@
     </div>
   </div>
     <!-- image carausel -->
-    <div class="second_glider_container padding-bottom-30">
+    <!-- <div class="second_glider_container padding-bottom-30">
         <h2>Featured Products</h2>
         <div class="glider-contain">
             <button class="glider-prev">‹</button>
@@ -331,7 +339,39 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
+            <!-- image carausel -->
+            <div class="game_images_container  margin-bottom-75">
+                <h2>Featured Products</h2>
+                <div class="glider-contain">
+                    <button class="glider-prev">‹</button>
+                    <button class="glider-next">›</button>
+                    <div class="glider">
+                        <div>
+                            <img src="./images/gone_fishing_slider_image.png" alt="carousel_image 1">
+                        </div>
+                        <div>
+                            <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
+                        </div>
+                        <div>
+                            <img src="./images/match_it_slider_image.png" alt="carousel_image 4t">
+                        </div>
+                        <div>
+                            <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                        </div>
+                        <div>
+                            <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                        </div>
+                        <div>
+                            <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
+                        </div>
+                        <div>
+                            <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
 
 
       <!-- latest from the blog section -->
@@ -455,17 +495,36 @@
         //     }
         // });
 
-        new Glider(document.querySelector('.glider'), {
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  draggable: true,
-  dots: '.dots',
-  arrows: {
-    prev: '.glider-prev',
-    next: '.glider-next'
-  }
-});
-
+      // glidejs function for games section
+      document.addEventListener('DOMContentLoaded', function () {
+            new Glider(document.querySelector('.glider'), {
+                slidesToShow: 4,
+                draggable: true,
+                type: 'carousel',
+                autoplay: 3500,
+                perView: 3,
+                focusAt: 'center',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next',
+                },
+                breakpoints: {
+                    800: {
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            draggable: true,
+                            arrows: false
+                        },
+                        slidesToShow: 2,
+                        draggable: true,
+                    },
+                    480: {
+                        slidesToShow: 1,
+                    }
+                }
+            });
+        });
 
 </script>
 </html>

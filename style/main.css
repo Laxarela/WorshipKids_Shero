@@ -8,10 +8,8 @@ body {
     width: 100%;
     height: 100vh;
     font-family: "Work Sans", serif;
-    /* overflow-x: hidden !important; */
+    overflow-x: hidden !important;
 }
-
-
 
 /* general text design */
 h2 {
