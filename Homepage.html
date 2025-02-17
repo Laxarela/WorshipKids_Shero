@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="shero intership homepage ">
+    <title>WorshipKid House</title>
+    <!--icon tab -->
+    <link rel="icon" type="image/png" href="./images/kids_tab_icon.png">
+    <!-- Linksheet for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- links for stylesheet styling -->
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/variables.css">
+    <link rel="stylesheet" href="./style/imageSlider.css">
+    <link rel="stylesheet" href="./style/tabs.css">
+    <link rel="stylesheet" href="./style/card.css">
+    <link rel="stylesheet" href="./style/blogCards.css" >
+
+     <!-- glidejs  install-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js/glider.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+      <!-- Swiper CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- homepage -->
+    <nav class="navbar padding-top-20">
+        <h3 class="mobile_upper_nav">WorshipHouse Media > </h3>
+        <div class="nav-container margin-auto">
+            <!-- mobile hamburger menu -->
+            <div class="nav_menu_mobile">
+                <img src="./images/hamburger_menu.png" alt="hamburger menu" class="menu-icon" />
+                <img src="./images/x-vector.svg" alt="close menu" class="close-icon" />
+                <div class="nav-links">
+                    <a href="#">Song Tracks</a>
+                    <a href="#">Games</a>
+                    <a href="#">Kids Videos</a>
+                    <a href="#">Countdowns</a>
+                    <a href="#">Motions</a>
+                    <a href="#">Still Background</a>
+                    <a href="#">Curriculum</a>
+                    <a href="#">Seasonal</a>
+                    <a href="#">On Sale</a>
+                </div>
+            </div>
+
+            <!-- desktop logo -->
+            <div class="logo">
+                <img src="./images/shero_logo.svg" alt="shero logo" />
+            </div>
+            <!-- mobile logo -->
+            <img src="./images/mobile_logo.png" alt="homepage mobile logo" class="mobile_logo" />
+            <!-- input button -->
+            <div class="input_button search-bar hide-desktop">
+                <input type="text" name="Find kids video" value="Find kids video" class="input_search" />
+            </div>
+            <div class="nav_buttons primary_button gap-20">
+                <img src="./images/login.png" alt="user_login" />
+                <img src="./images/shoppingCart.png" alt="shopping_Cart" />
+
+            </div>
+
+        </div>
+        <!-- input button -->
+        <div class="input_button_mobile search-bar  display_none margin-top-20">
+            <input type="text" name="Find kids video" value="Find kids video" class="input_search" />
+        </div>
+        <div class="secondary_nav flex padding-top-20 justify-content-start">
+            <div class="nav-links">
+                <a href="#">Song Tracks</a>
+                <a href="#">Games</a>
+                <a href="#">Kids Videos</a>
+                <a href="#">Countdowns</a>
+                <a href="#">Motions</a>
+                <a href="#">Still Background</a>
+                <a href="#">Curriculum</a>
+                <a href="#">Seasonal</a>
+                <a href="#">On Sale</a>
+            </div>
+            <button class="primary_button">WorshipHouse Media</button>
+        </div>
+    </nav>
+    <!-- Slideshow container -->
+    <div class="slideshow-container flex padding-top-20 glider-first">
+        <div class="mySlides fade">
+            <img src="./images/banner-image.jpg" alt="homepage banener slider">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./images/footer-background.png" alt="homepage banener slider">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./images/banner-image.jpg" alt="homepage banener slider">
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center " class="padding-20">
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <!-- tabs with image  pinl section-->
+    <div class="tabs-container flex padding-bottom-20">
+        <h2 class="uppercase pink padding-bottom-20">best sellers</h2>
+        <div class="tabs-blocks flex">
+            <div className="tabs">
+                <button class="tab active" data-category="all">
+                    ALL Products
+                </button>
+                <button class="tab" data-category="games">
+                    Games
+                </button>
+                <button class="tab" data-category="kids-videos">
+                    Kids videos
+                </button>
+                <button class="tab" data-category="countdowns">
+                    Countdowns
+                </button>
+                <button class="tab" data-category="motions">
+                    Motions
+                </button>
+                <button class="tab" data-category="stillbackground">
+                    Still backgrounds
+                </button>
+                <button class="tab" data-category="curriculum">
+                    curriculum
+                </button>
+
+            </div>
+
+        </div>
+        <div class="product-container flex " id="product-container"></div>
+
+    </div>
+
+    <!-- image and text moving section -->
+    <div class="game-card margin-top-20  padding-top-10">
+        <div class="moving_text">
+            <img src="./images/play_for_free.png" alt="play for free text banner" />
+            <img src="./images/play_for_free.png" alt="play for free text banner" />
+
+            <img src="./images/play_for_free.png" alt="play for free text banner" />
+            <img src="./images/play_for_free.png" alt="play for free text banner" />
+        </div>
+        <div class="flex lunch_box_info">
+            <div class="game-image">
+                <img src="./images/lunch_box.png" alt="Lunchbox Shuffle" class="image_banner" />
+            </div>
+            <div class="game-info">
+                <h2 class="game-title  black">Lunchbox Shuffle</h2>
+                <h5 class="game-subtitle">Children's Ministry Deals</h5>
+                <p class="game-description">
+                    This game video will challenge kids to keep track of specific lunch boxes as they are shuffled
+                    around on
+                    the screen. Whoever gets the most right, wins!
+                </p>
+                <button class="primary_button secondary_button">Play Now</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- sign your email section -->
+        <div class="game-card email_banner  flex ">
+            <div class="flex lunch_box_info reverse-flex">
+                <div class="game-image overflow_auto">
+                    <img src="./images/is-that-really-in-the-bible.png" alt="enter your emaail banner" class="image_banner  rotate_image" />
+                </div>
+                <div class="game-info  ">
+                    <h2 class="game-title  ">Want more free stuff?</h2>
+                    <p class="game-description white">
+                        Enter your email and we'll send you KidMin ideas, special offers,
+                        and FREE children's video downloads throughout the month.
+                    </p>
+                    <!-- input button -->
+                    <div class="input_button email_input  padding-bottom-20">
+                        <input type="email" name="Enter your email address" value="Enter your email address"
+                            class="email_logo" />
+                    </div>
+                    <button class="primary_button  padding-top-10">Play Now</button>
+                </div>
+            </div>
+        </div>
+            <!-- 
+    tabs with image 2 -->
+    <div class="tabs-container   flex padding-bottom-20">
+        <h2 class="uppercase blue padding-bottom-20 padding-top-100 text-align">THe Latest</h2>
+        <div class="tabs-blocks flex">
+            <div className="tabs ">
+                <button class="tab tab_secondary active" data-category="all">
+                    ALL Products
+                </button>
+                <button class="tab tab_secondary" data-category="games">
+                    Games
+                </button>
+                <button class="tab tab_secondary" data-category="kids-videos">
+                    Kids videos
+                </button>
+                <button class="tab tab_secondary" data-category="countdowns">
+                    Countdowns
+                </button>
+                <button class="tab tab_secondary" data-category="motions">
+                    Motions
+                </button>
+                <button class="tab tab_secondary" data-category="stillbackground">
+                    Still backgrounds
+                </button>
+                <button class="tab tab_secondary" data-category="curriculum">
+                    curriculum
+                </button>
+
+            </div>
+
+        </div>
+        <div class="product-container secondary_tabs_container  flex " id="product-container2"></div>
+
+    </div>
+
+       <!-- image and text section2 -->
+       <div class="game-card  padding-top-20 cosmic_wonder  flex">
+        <div class="flex lunch_box_info">
+            <div class="game-image">
+                <img src="./images/cosmic_woder.png" alt="cosmic wonder image" class="image_banner" />
+            </div>
+            <div class="game-info">
+                <h2 class="game-title  black">Lunchbox Shuffle</h2>
+                <h5 class="game-subtitle">Children's Ministry Deals</h5>
+                <p class="game-description">
+                    This game video will challenge kids to keep track of specific lunch boxes as they are shuffled
+                    around on
+                    the screen. Whoever gets the most right, wins!
+                </p>
+                <button class="primary_button secondary_button w-100">Play Now</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Swiper Container -->
+ <!-- <div class="featured_games margin-top-30">  <h2 class="blue flex padding-20">Featured Products</h2>
+<div class="swiper-container padding-20">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+</div> -->
+
+          <!-- Testimonials Section -->
+  <h2 class="pink flex padding-top-100 text-align">What They Say About Us</h2>
+
+  <div class="swiper-container testimonials-slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- <p class="testinomies_background white">❝</p> -->
+           <img src="./images/mobile_quotes.png"/>
+          <h3 class="padding-top-20">Darlene Robertson</h3>
+          <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/mobile_quotes.png"/>
+          <h3>Darlene Robertson</h3>
+          <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/mobile_quotes.png"/>
+          <h3>Annette Black</h3>
+          <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/mobile_quotes.png"/>
+          <h3>Theresa Webb</h3>
+          <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+    <!-- image carausel -->
+    <div class="second_glider_container padding-bottom-30">
+        <h2>Featured Products</h2>
+        <div class="glider-contain">
+            <button class="glider-prev">‹</button>
+            <button class="glider-next">›</button>
+            <div class="glider_featured">
+                <div>
+                    <img src="./images/gone_fishing.png" alt="carousel_image 1">
+                </div>
+                <div>
+                    <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
+                </div>
+                <div>
+                    <img src="./images/match_it_slider_image.png" alt="carousel_image 4t">
+                </div>
+                <div>
+                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                </div>
+                <div>
+                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                </div>
+                <div>
+                    <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
+                </div>
+                <div>
+                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+      <!-- latest from the blog section -->
+      <div class="blog_section margin-top-50">
+        <div class="information_section">
+            <h2>Latest from Worshiphouse Kids Blog!</h2>
+            <p class="white">Discover fresh ideas, expert tips, and engaging resources on the WorshipHouse Kids blog—your go-to source
+                for creative ways to inspire and teach kids about Jesus in your children’s ministry.</p>
+
+            <div id="blog-buttons" class="blog-buttons">
+
+                <a href="https://blog.worshiphousekids.com/" class="blog-category-button" target="_blank">
+                    Show All
+                </a>
+
+                <a href="https://blog.worshiphousekids.com/category/kidmin-activities-crafts/"
+                    class="blog-category-button" target="_blank">
+                    Uncategorized
+                </a>
+
+                <a href="https://blog.worshiphousekids.com/category/kidmin-leadership-resources/"
+                    class="blog-category-button" target="_blank">
+                    Easter
+                </a>
+
+                <a href="https://blog.worshiphousekids.com/category/seasonal-special-programs/"
+                    class="blog-category-button" target="_blank">
+                    Sesonal
+                </a>
+
+            </div>
+        </div>
+        <div class="blog_post_section margin-top-20 ">
+            <div class="blog_posts grid_formation">
+                <div id="blog-container" class="blog-container"></div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    
+    <!-- footer section -->
+    <footer class="flex">
+        <div class="footer-container flex">
+            <div class="footer-col-1">
+                <img src="./images/mobile_logo.png" alt="footer_logo" />
+                <p class="footer-text ">WorshipHouse Kids offers children's worship media resources to help make
+                    learning about God fun, interactive, and meaningful.  You can find the best in kids worship videos,
+                    Christian worship songs, backgrounds, and church curriculum to make a lasting imprint on the lives
+                    of tomorrow's church.</p>
+                <div class=" flex gap-30 justify-content-start social-buttons">
+                    <a href="#" class="text-decoration"> <img src="./images/social_media-facebook.png"
+                            alt="social media facebook" /></a>
+                    <a href="#" class="text-decoration"> <img src="./images/social_media-instagram.png"
+                            alt="social media instagram" /></a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <ul>
+                    <li class="footer-text padding-bottom-10 ">On Sale</li>
+                    <li class="footer-text padding-bottom-10 ">About Us</li>
+                    <li class="footer-text padding-bottom-10">WHK KidMin Blog</li>
+                    <li class="footer-text padding-bottom-10">Terms & Conditions</li>
+                    <li class="footer-text padding-bottom-10">Terms & Conditions</li>
+                    <li class="footer-text padding-bottom-10">Contact Us</li>
+                    <li class="footer-text padding-bottom-10">Help</li>
+                </ul>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                    <li class="footer-text padding-bottom-10 ">Submit Media</li>
+                    <li class="footer-text padding-bottom-10">Streaming Infromation</li>
+                    <li class="footer-text padding-bottom-10">License Agreement</li>
+                    <li class="footer-text padding-bottom-10">CCPA — Do Not Sell My Personal Information</li>
+                    <li class="footer-text padding-bottom-10">California — CCPA Notice</li>
+                    <li class="footer-text padding-bottom-10"></li>
+                    <li class="footer-text padding-bottom-10"></li>
+                </ul>
+            </div>
+            <div class="footer-col-4 ">
+                <h2 class="no-margin">Subscribe to our newsletter</h2>
+                <p class="footer-text ">Enter your email and we'll send you KidMin ideas, special offers,
+                    and FREE children's video downloads throughout the month.</p>
+                <div class="input_button search-bar margin-bottom-20">
+                    <input type="email" name="Enter your email addres" value=" Enter your email address"
+                        class="margin-bottom-10" />
+                </div>
+                <button class="primary_button secondary_button margin-bottom-20">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-credendials  flex padding-top-10 ">
+            <h4 class="footer-text">© 2024 WorshipHouse Kids. All Rights Reserved.</h4>
+            <h4 class="footer-text ">Help</h4>
+        </div>
+    </footer>
+
+</body>
+<script src="./js/homepage.js"></script>
+<!-- logic for tabs -->
+<script src="./js/tabs.js"></script>
+<!-- blog post card creation -->
+ <script src="./js/blogPost.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+        //   var swiper = new Swiper('.swiper', {
+        //     slidesPerView: 3,
+        //     spaceBetween: 20,
+        //     loop: true,
+        //     arrows:true,
+        //     autoplay: {
+        //         delay: 2000,
+        //         disableOnInteraction: false,
+        //     },
+        //     breakpoints: {
+        //         1024: { slidesPerView: 3 },
+        //         768: { slidesPerView: 1 },
+        //         580: { slidesPerView: 1 }
+        //     }
+        // });
+
+        new Glider(document.querySelector('.glider'), {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  draggable: true,
+  dots: '.dots',
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  }
+});
+
+
+</script>
+</html>
