@@ -39,7 +39,7 @@ input[type=email] {
 }
 
 .footer-col-1 {
-    max-width: 460px; 
+    max-width: 319px; 
      width: 100%;
 }
 .footer-col-2{
@@ -64,7 +64,9 @@ input[type=email] {
     .social-buttons {
         justify-content: center !important;
     }
-
+    .footer-col-1{
+        padding-top: 20px;
+    }
     .footer-col-4 {
         flex-direction: column;
         text-align: center;

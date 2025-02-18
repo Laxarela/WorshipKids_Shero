@@ -40,13 +40,6 @@
 @media only screen and (max-width: 750px) {
     .tabs-blocks>div {
         max-width: 300px;
-        /* width: 100%;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        display: flex;
-        flex-direction: row;
-        scroll-behavior: smooth;
-        scrollbar-width: none; */
     }
 }
 
@@ -97,10 +90,16 @@
     object-fit: cover;
     padding: 90px;
 }
+@media only screen and (max-width:950px) {
+    .product-container {
+        padding: 80px;
+    }
+  }
 
 .secondary_tabs_container {
     background-image: url("../images/secondary_tabs_background.png");
 }
+
 
 @media only screen and (max-width: 750px) {
     .product-container {
