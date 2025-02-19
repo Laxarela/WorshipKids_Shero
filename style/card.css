@@ -13,6 +13,50 @@
     max-height: 750px; 
     width: 100%;
     margin-bottom: 45px;
+    position: relative;
+    z-index: 99;
+}
+.background-shapes::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/lunchbox_shape_background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    z-index: 9;
+    top: 21%;
+    right: 4%;
+
+}
+.background-shapes::after{
+    content: "";
+    position: absolute;
+    background-image: url("../images/lunchbox_shape_background_2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 143px;
+    height: 142px;
+    z-index: 9;
+    top: 75%;
+    right: 4%;
+}
+@media only screen and (max-width:1290px) {
+    .background-shapes::before{
+        top: 30%;
+        width: 170px;
+        height: 200px;
+        background-size: cover;
+   
+    }
+    
+}
+@media only screen and (max-width:1290px) {
+    .background-shapes::before , .background-shapes::after{
+      opacity: 0;
+      display: none;
+   
+    }
 }
 .lunch_box_info{
     padding: 15px 0;
@@ -47,14 +91,6 @@
   
   .scroller[data-animated="true"] {
     overflow: hidden;
-    /* -webkit-mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
   }
   
   .scroller[data-animated="true"] .scroller__inner {

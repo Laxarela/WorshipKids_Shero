@@ -11,11 +11,22 @@
     background-color: #F466AF;
     background-position: center;
     background-size: cover;
+    z-index: 99;
+    margin-bottom: 50px;
 }
 .blog_section::before{
     content: "";
     clip-path: polygon(-9% 0%, 100% 0, 100% 100%, 0% 100%); 
     border-radius: 144px 0 150px 2px / 144px 0px 150px 2px;
+    background: url("../images/blog_post_background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    z-index: 9;
+    transform: rotate(45deg);
+    bottom: 20%;
+    left: 20%;
     
 }
 
@@ -36,9 +47,11 @@
         justify-content: center;
         max-height: max-content;
         align-items: center;
+        margin-bottom: 20px;
     }
     .blog_section::before{
-        border-radius: 20px;
+        opacity: 0;
+        display: none;
     }
 }
 
