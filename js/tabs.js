@@ -102,6 +102,16 @@ document.querySelectorAll(".tab").forEach(tab => {
 });
 
 
+// // Tab click event for blue tabs section
+document.querySelectorAll(".blue_tab").forEach(tab => {
+    tab.addEventListener("click", function () {
+        document.querySelectorAll(".blue_tab").forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+        renderProducts(this.dataset.category);
+        renderProducts2(this.dataset.category);
+    });
+});
+
 
 
 

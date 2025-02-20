@@ -50,6 +50,9 @@ input[type=email] {
     max-width: 226px;
   width: 100%;
 }
+.footer-col-4 h2{
+    white-space: nowrap;
+}
 
 @media only screen and (max-width: 900px) {
     .footer-container {
@@ -72,6 +75,7 @@ input[type=email] {
         text-align: center;
         display: flex;
         align-items: center;
+        white-space: wrap;
     }
 
 }

@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* max widht screen */
+    background-size: cover;
 }
 
 .navbar::before {
@@ -18,13 +20,23 @@
     top: 0;
     left: 0;
     z-index: 1;
- 
+}
+.navbar::after{
+    content: "";
+    position: absolute;
+    background: url("../images/navbar_after.png");
+    width: 100%;
+    height: 8px;
+    top: 32%;
+    z-index: 1;
 }
 
 @media screen and (max-width:1126px) {
-    .navbar::before {
+    .navbar::before ,.navbar::after  {
         opacity: 0;
+        display: none;
     }
+
 }
 
 
@@ -69,14 +81,35 @@
 
 .search-bar {
     border-top: 20px;
-    max-width: 700px;
+    max-width: 500px;
     width: 100%;
     height: 52px;
-    border: none;
+    position: relative;
+    /* background-color: #FFFFFF; */
+    /* border: none;
     border-top-left-radius: 34px;
     border-bottom-left-radius: 7px;
-    border-top-right-radius: 35px;
-    background-image: url("../images/search_bar.png");
+    border-top-right-radius: 35px; */
+    /* background-image: url("../images/search_bar.png"); */
+}
+.search-bar::before{
+    content:"";
+    position: absolute;
+    background-image: url("../images/input_before.png");
+    background-repeat: no-repeat;
+    top: 0;
+    left: -3%;
+    width: 25px;
+    height: 52px;
+}
+.search-bar::after{
+    content:"";
+    position: absolute;
+    background-image: url("../images/input_after.png");
+    background-repeat: no-repeat;
+    right: -6%;
+    width: 30px;
+    height: 52px;
 }
 
 @media only screen and (max-width:1469px) {
@@ -101,7 +134,7 @@ input[type=text] {
     box-sizing: border-box;
     border: none;
     font-size: 16px;
-    background-color: transparent;
+    background-color: #FFFFFF;
     background-image: url('../images/search_icon.png');
     background-position: 36px 10px;
     background-repeat: no-repeat;
@@ -110,6 +143,7 @@ input[type=text] {
     line-height: 18.77px;
     color: rgba(64, 200, 244, 1);
     padding: 12px 20px 12px 80px;
+    height: 52px;
 }
 
 /* secondary nav whch has the links */

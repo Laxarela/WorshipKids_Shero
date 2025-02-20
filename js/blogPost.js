@@ -3,40 +3,40 @@ const blogContainer = document.getElementById("blog-container");
 
 
 const blogPosts = [
-    {
-      title: "KidMin Thanksgiving Ideas to Grow Thankful Hearts",
-      image: "./images/blog_post_1.png",
-      date: "6/11/2024",
-      author: "Alysa Reutov",
-      description: "As we prepare to celebrate Thanksgiving in a few weeks, it’s the perfect time to...",
-      link: "https://blog.worshiphousekids.com/kidmin-thanksgiving-ideas-to-grow-thankful-hearts/"
-    },
-    {
-      title: "Creative Ways to Engage Kids in Worship",
-      image: "./images/blog_post_2.png",
-      date: "10/11/2024",
-      author: "John Doe",
-      description: "Discover engaging ways to involve children in worship sessions effectively...",
-      link: "https://blog.example.com/creative-ways-to-engage-kids-in-worship"
-    },
-    {
-      title: "Fun Christmas Activities for Sunday School",
-      image: "./images/blog_post_2.png",
-      date: "15/11/2024",
-      author: "Jane Smith",
-      description: "Plan exciting and meaningful Christmas activities for kids in Sunday school...",
-      link: "https://blog.example.com/fun-christmas-activities-for-sunday-school"
-    },
-    {
-        title: "Fun Christmas Activities for Sunday School",
-        image: "./images/blog_post_1.png",
-        date: "15/11/2024",
-        author: "Jane Smith",
-        description: "Plan exciting and meaningful Christmas activities for kids in Sunday school...",
-        link: "https://blog.example.com/fun-christmas-activities-for-sunday-school"
-      }
-  ];
-  
+  {
+    title: "KidMin Thanksgiving Ideas to Grow Thankful Hearts",
+    image: "./images/blog_post_1.png",
+    date: "6/11/2024",
+    author: "Alysa Reutov",
+    description: "As we prepare to celebrate Thanksgiving in a few weeks, it’s the perfect time to...",
+    link: "https://blog.worshiphousekids.com/kidmin-thanksgiving-ideas-to-grow-thankful-hearts/"
+  },
+  {
+    title: "Creative Ways to Engage Kids in Worship",
+    image: "./images/blog_post_2.png",
+    date: "10/11/2024",
+    author: "John Doe",
+    description: "Discover engaging ways to involve children in worship sessions effectively...",
+    link: "https://blog.example.com/creative-ways-to-engage-kids-in-worship"
+  },
+  {
+    title: "Fun Christmas Activities for Sunday School",
+    image: "./images/blog_post_2.png",
+    date: "15/11/2024",
+    author: "Jane Smith",
+    description: "Plan exciting and meaningful Christmas activities for kids in Sunday school...",
+    link: "https://blog.example.com/fun-christmas-activities-for-sunday-school"
+  },
+  {
+    title: "Fun Christmas Activities for Sunday School",
+    image: "./images/blog_post_1.png",
+    date: "15/11/2024",
+    author: "Jane Smith",
+    description: "Plan exciting and meaningful Christmas activities for kids in Sunday school...",
+    link: "https://blog.example.com/fun-christmas-activities-for-sunday-school"
+  }
+];
+
 
 blogPosts.forEach(post => {
   const blogHTML = `
