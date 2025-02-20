@@ -21,7 +21,7 @@
     left: 0;
     z-index: 1;
 }
-.navbar::after{
+/* .navbar::after{
     content: "";
     position: absolute;
     background: url("../images/navbar_after.png");
@@ -29,7 +29,7 @@
     height: 8px;
     top: 32%;
     z-index: 1;
-}
+} */
 
 @media screen and (max-width:1126px) {
     .navbar::before ,.navbar::after  {

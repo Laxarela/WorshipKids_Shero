@@ -100,6 +100,8 @@
             <button class="primary_button">WorshipHouse Media</button>
         </div>
     </nav>
+
+
     <!-- Slideshow container -->
     <div class="slideshow-container flex padding-top-20 glider-first">
         <div class="mySlides fade">
@@ -269,45 +271,25 @@
     </div>
 
     <!-- Swiper Container -->
-    <!-- <div class="featured_games margin-top-30">  <h2 class="blue flex padding-20">Featured Products</h2>
+    <!----> <div class="featured_games margin-top-30">  <h2 class="blue flex padding-20">Featured Products</h2>
 <div class="swiper-container padding-20">
-    <div class="swiper">
+    <div class="swiper swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
             <div class="swiper-slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
             <div class="swiper-slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
             <div class="swiper-slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
             <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
-            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
-            <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 5"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
+            <div class="swiper-slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
 </div>
-</div> -->
-    <!-- <div class="slider">
-        <div class="item">
-            <img src="./images/feature_game_1.png" alt="Game 1">
-        </div>
-        <div class="item">
-            <img src="./images/feature_game_2.png" alt="Game 2">
-        </div>
-        <div class="item">
-            <img src="./images/feature_game_3.png" alt="Game 3">
-        </div>
-        <div class="item">
-            <img src="./images/feature_game_4.png" alt="Game 4">
-        </div>
-        <div class="item">
-            <img src="./images/feature_game_2.png" alt="Game 2">
-        </div>
-    </div> -->
-
-
-
-
-
+</div> 
 
     <!-- Testimonials Section -->
     <section class="testimonial-section ">
@@ -352,43 +334,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <h2 class="pink flex padding-top-100 text-align">What They Say About Us</h2>
-
-    <div class="swiper-container testimonials-slider">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                     <p class="testinomies_background white">❝</p> 
-                    <img src="./images/mobile_quotes.png" />
-                    <h3 class="padding-top-20">Darlene Robertson</h3>
-                    <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/mobile_quotes.png" />
-                    <h3>Darlene Robertson</h3>
-                    <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/mobile_quotes.png" />
-                    <h3>Annette Black</h3>
-                    <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/mobile_quotes.png" />
-                    <h3>Theresa Webb</h3>
-                    <p class="white">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-
-            
-            <div class="swiper-pagination"></div>
-        </div>
-    </div> -->
 
     <!-- image carausel -->
     <div class="game_images_container  margin-bottom-75">
@@ -467,6 +412,7 @@
 
     <!-- footer section -->
     <footer class="flex">
+        <!-- <img src="images/footer_background_2.png" alt="upper piece of footer design" class="footer_upper_image"> -->
         <div class="footer-container flex">
             <div class="footer-col-1">
                 <img src="./images/mobile_logo.png" alt="footer_logo" />
@@ -533,26 +479,20 @@
 <!-- SPLIDEJS -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var swiper = new Swiper('.swiper', {
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: 5,
+            // slidesPerView: 5,
             loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            coverflowEffect: {
-                // rotate: 50,
-                stretch: 0,
-                // depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
+            // coverflowEffect: {
+            //     stretch: 0,
+            //     modifier: 1,
+            //     slideShadows: true,
+            // },
             breakpoints: {
                 1024: { slidesPerView: 3 },
                 768: { slidesPerView: 2 },
@@ -561,21 +501,71 @@
         });
     });
 
-    // featured games
-    // featured games
-    $(document).ready(function () {
-        $(".slider").slick({
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            speed: 500,
-            autoplaySpeed: 5000,
-            infinite: true,
-            autoplay: true,
-            centerMode: true,
-            centerPadding: "0",
-        });
-    });
+    // featured games section
+
+//     document.addEventListener("DOMContentLoaded", function () {
+//     var swiper = new Swiper(".swiper-container", {
+//         slidesPerView: 5, // Show 5 slides
+//         spaceBetween: 20, // Adjust spacing
+//         loop: true, // Infinite loop
+//         centeredSlides: true, // Center the active slide
+//         navigation: {
+//             nextEl: ".swiper-button-next",
+//             prevEl: ".swiper-button-prev",
+//         },
+//         pagination: {
+//             el: ".swiper-pagination",
+//             clickable: true,
+//         },
+//         on: {
+//             slideChangeTransitionEnd: function () {
+//                 document.querySelectorAll('.swiper-slide').forEach(slide => {
+//                     slide.classList.remove("swiper-slide-zoomed");
+//                 });
+//                 document.querySelector('.swiper-slide-active').classList.add("swiper-slide-zoomed");
+//             }
+//         },
+//     });
+// });
+// document.addEventListener('DOMContentLoaded', function () {
+//             new Glider(document.querySelector('.glide_featured_games'), {
+//                 slidesToShow: 4,
+//                 draggable: true,
+//                 type: 'carousel',
+//                 autoplay: 3500,
+//                 perView: 3,
+//                 focusAt: 'center',
+//                 arrows: {
+//                     prev: '.glider-prev',
+//                     next: '.glider-next',
+//                 },
+//                 breakpoints: {
+//                     800: {
+//                         settings: {
+//                             slidesToShow: 1,
+//                             slidesToScroll: 1,
+//                             draggable: true,
+//                             arrows: false
+//                         },
+//                         slidesToShow: 2,
+//                         draggable: true,
+//                     },
+//                     480: {
+//                         slidesToShow: 1,
+//                         draggable: true,
+//                         settings: {
+//                             slidesToShow: 1,
+//                             slidesToScroll: 1,
+//                             draggable: true,
+//                             arrows: false
+//                         }
+//                     }
+//                 }
+//             });
+//         });
+
+
+
 
     // testiomonies 
     document.addEventListener('DOMContentLoaded', function () {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glide Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <style>
+        .zoomed-slide {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .glide {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<!----> <div class="glide_container">
+    <h2>Featured Products</h2>
+    <div class="glider-contain  glide_featured_games">
+        <button class="glider-prev">‹</button>
+        <button class="glider-next">›</button>
+        <div class="glider ">
+            <div class="glide__slides">
+                <div class="glide__slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
+                <div class="glide__slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
+                <div class="glide__slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
+                <div class="glide__slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
+                <div class="glide__slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
+                <div class="glide__slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
+                <div class="glide__slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
+                <div class="glide__slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
+                <div class="glide__slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
+            </div>
+        </div>
+
+    </div>
+</div> 
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const featuredGlide = new Glide(".glide_featured_games", {
+                type: "carousel",
+                focusAt: "center",
+                startAt: 0,
+                perView: 3,
+                gap: 20,
+                autoplay: 3000,
+                animationDuration: 800,
+                breakpoints: {
+                    1024: { perView: 2 },
+                    768: { perView: 1 }
+                }
+            });
+
+            featuredGlide.on(["mount.after", "run"], function () {
+                document.querySelectorAll(".glide_featured_games .glide__slide").forEach((slide) => {
+                    slide.classList.remove("zoomed-slide");
+                });
+                const activeIndex = featuredGlide.index;
+                document.querySelector(`.glide_featured_games .glide__slide:nth-child(${activeIndex + 1})`)?.classList.add("zoomed-slide");
+            });
+
+            featuredGlide.mount();
+        });
+    </script>
+
+</body>
+</html>
