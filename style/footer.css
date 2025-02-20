@@ -6,13 +6,28 @@ footer {
     background-size: cover;
     margin: 0 auto;
     flex-direction: column;
-
+    position: relative;
 }
-
+footer::after{
+    content: "";
+    background: url("../images/footer_bacground_1.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -1%;
+    left: -1%;
+    z-index: 1;
+}
+.footer_section{
+    margin-top: 100px;
+}
+.footer_upper_image{
+    width: 100%;
+}
 .footer-container {
     flex-direction: row;
     width: 90%;
-    margin-top: 100px;
     gap: 55px;
     align-items: flex-start;
     text-align: start;
@@ -20,6 +35,25 @@ footer {
 .input_button, .footer_input{
     display: block;
 }
+@media screen and (max-width:1024px) {
+    .footer_upper_image{
+        margin: 21px;
+    }
+    .footer-container{
+        padding-top: 20px;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .footer_upper_image{
+        display: none;
+    }
+    .footer-container{
+        padding-top: 5px;
+    }
+    
+}
+
 
 
 input[type=email] {
@@ -55,8 +89,15 @@ input[type=email] {
 }
 
 @media only screen and (max-width: 1104px) {
-    .footer-col-4 {
-        white-space: wrap;
+    .footer-col-4  h2{
+        white-space: wrap !important;
+    }
+    .footer-col-4 .input_button{
+        max-width: 400px;
+    }
+    footer::after{
+        display: none;
+        opacity: 0;
     }
 }
 @media only screen and (max-width: 900px) {

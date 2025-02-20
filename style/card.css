@@ -58,8 +58,44 @@
    
     }
 }
+
+.email_banner::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/email_banner_background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 143px;
+    height: 90px;
+    z-index: 1;
+    bottom: 0;
+}
+.email_banner::after{
+    content: "";
+    position: absolute;
+    background-image: url("../images/email_banner_bacground_2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 143px;
+    height: 142px;
+    z-index: 1;
+    top: 0;
+}
+@media  only screen and (max-width:1120px) {
+    .email_banner::after,.email_banner::before{
+        display: none;
+        opacity: 0;
+    }
+    
+}
 .lunch_box_info{
     padding: 15px 0;
+}
+.game-card .lunch_box_info .game-info .email_input{
+    max-width: 400px;
+}
+.game-card .lunch_box_info .game-info .email_input::after{
+    right: -7%;
 }
 
 @media only screen and (max-width: 750px) {

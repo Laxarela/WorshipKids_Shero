@@ -21,7 +21,7 @@
     left: 0;
     z-index: 1;
 }
-/* .navbar::after{
+.navbar::after{
     content: "";
     position: absolute;
     background: url("../images/navbar_after.png");
@@ -29,7 +29,19 @@
     height: 8px;
     top: 32%;
     z-index: 1;
-} */
+}
+@media only screen  and (min-width:2548px) and (max-width:2560px)  {
+    .navbar::after{
+        top: 41%;
+    }
+    
+}
+@media only screen  and (max-width:1440pxW)  {
+    .navbar::after{
+        top: 71%;
+    }
+    
+}
 
 @media screen and (max-width:1126px) {
     .navbar::before ,.navbar::after  {
@@ -69,6 +81,14 @@
         margin-top: 25px !important;
     }
 }
+@media only screen and (max-width: 400px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 40px;
+
+    }
+}
+
 
 @media only screen and (max-width: 600px) {
     .nav-container {
