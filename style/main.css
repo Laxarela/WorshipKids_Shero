@@ -118,6 +118,18 @@ p {
     display: flex;
     justify-content: center;
 }
+@media screen and (max-width:950px) {
+    .secondary_button{
+        width: 270px;
+    }
+    
+}
+@media screen and (max-width:425px) {
+    .secondary_button{
+        width: 244px;
+    }
+    
+}
 
 
 .secondary_button::before{
@@ -130,7 +142,7 @@ p {
     background-repeat: no-repeat;
     padding: 20px; 
 }
-.primary_button::after{
+.secondary_button::after{
     content: "";
     position: absolute;
     height: 50px;

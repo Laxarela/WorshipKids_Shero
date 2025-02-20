@@ -54,6 +54,11 @@ input[type=email] {
     white-space: nowrap;
 }
 
+@media only screen and (max-width: 1104px) {
+    .footer-col-4 {
+        white-space: wrap;
+    }
+}
 @media only screen and (max-width: 900px) {
     .footer-container {
         flex-direction: column;
@@ -92,6 +97,9 @@ input[type=email] {
     .footer-text {
         font-size: 14px;
         list-style: none;
+    }
+    .footer-col-4 .input_button {
+        width: 80%;
     }
 
 }

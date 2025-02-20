@@ -348,67 +348,6 @@ div#testimonial-slider-track{
         align-items: center;
       }*/
   
-      /* Swiper Slides (Testimonial Cards) 
-      .swiper-slide {
-        background-color: #ff66b2; 
-        padding: 40px;
-        border-radius: 20px;
-        color: white;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-        position: relative;
-        animation: floatAnimation 3s ease-in-out infinite alternate;
-       
-      }*/
-      /* @media only screen and (max-width:500px){
-        .swiper-slide{
-          width: 300px !important;
-        }
-      } 
-      .testinomies_background{
-        background-image: url("./images/testimonies.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-
-      }*/
-  
-      /* Floating Animation 
-      @keyframes floatAnimation {
-        0% {
-          transform: translateY(10px);
-        }
-        100% {
-          transform: translateY(-10px);
-        }
-      }*/
-  
-      /* Alternate Floating 
-      .swiper-slide:nth-child(even) {
-        animation: floatAnimationReverse 3s ease-in-out infinite alternate;
-      }
-  
-       @keyframes floatAnimationReverse {
-        0% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(10px);
-        }
-      } */
-  
-      /* Custom Background Colors for Slides 
-      .swiper-slide:nth-child(1) { background-color: #3358a5; } 
-      .swiper-slide:nth-child(2) { background-color: #ff66b2; } 
-      .swiper-slide:nth-child(3) { background-color: #36c5f0; } 
-      .swiper-slide:nth-child(4) { background-color: #f36b5b; }*/
-
-
-
-
       /* ////////////////////////////////////////////////////////////////////////////////////////////// */
       
 
@@ -416,6 +355,9 @@ div#testimonial-slider-track{
 
 /* carousel styling */
 
+.game_images_container .glider-contain{
+  width: 75%;
+}
 
 @media only screen and (max-width:950px) {
   .game_images_container {
@@ -425,6 +367,9 @@ div#testimonial-slider-track{
     flex-direction: column;
     margin-bottom: 50px;
     margin: 0 auto;
+  }
+  .game_images_container .glider-contain{
+    width: 90%;
   }
 }
 .glide {
