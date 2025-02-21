@@ -322,12 +322,10 @@
     </div>
 
     <!-- Swiper Container -->
-    <!--featured games not exactly like in the design ,-->
+    <!-- featured games not exactly like in the design ,-->
     <div class="featured_games margin-top-30">
         <h2 class="blue flex margin-bottom-20">Featured Products</h2>
-        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
-            centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
-            coverflow-effect-depth="100" coverflow-effect-modifier="1">
+         <swiper-container class="mySwiper">
             <div class="swiper swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
@@ -400,8 +398,11 @@
                     </svg>
                 </div>
             </div>
-        </swiper-container>
+        </swiper-container> 
+
+
     </div>
+    
 
     <!-- Testimonials Section -->
     <section class="testimonial-section ">
@@ -448,34 +449,12 @@
     </section>
 
     <!-- image carausel -->
-    <div class="game_images_container  margin-bottom-75">
+    <div class="game_images_container">
         <h2 class="blue flex">Featured Products</h2>
         <div class="glider-contain">
             <button class="glider-prev">‹</button>
             <button class="glider-next">›</button>
-            <div class="glider">
-                <div>
-                    <img src="./images/gone_fishing_slider_image.png" alt="carousel_image 1">
-                </div>
-                <div>
-                    <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
-                </div>
-                <div>
-                    <img src="./images/match_it_slider_image.png" alt="carousel_image 4t">
-                </div>
-                <div>
-                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
-                </div>
-                <div>
-                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
-                </div>
-                <div>
-                    <img src="./images/this_is_our_god_slider_image.png" alt="carousel_image 3">
-                </div>
-                <div>
-                    <img src="./images/pumpkin_prayer_slider_image.png" alt="carousel_image 1">
-                </div>
-            </div>
+            <div class="glider myGlider" id="glide2"></div>
 
         </div>
     </div>
@@ -525,7 +504,7 @@
     <!-- footer section -->
     <footer class="flex footer_section">
         <img src="images/footer_background_2.png" alt="upper piece of footer design" class="footer_upper_image">
-        <div class="footer-container flex">
+        <div class="footer-container flex padding-top-50">
             <div class="footer-col-1">
                 <img src="./images/mobile_logo.png" alt="footer_logo" />
                 <p class="footer-text ">WorshipHouse Kids offers children's worship media resources to help make
@@ -580,10 +559,6 @@
 
 </body>
 <script src="./js/homepage.js"></script>
-<!-- logic for tabs -->
-<script src="./js/tabs.js"></script>
-<!-- blog post card creation -->
-<script src="./js/blogPost.js"></script>
 <!-- GLIDEJS -->
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <!-- SWIPER -->
@@ -591,6 +566,10 @@
 <!-- SPLIDEJS -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- logic for tabs -->
+<script src="./js/tabs.js"></script>
+<!-- blog post card creation -->
+<script src="./js/blogPost.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var swiper = new Swiper('.swiper', {
@@ -646,34 +625,35 @@
         splide.mount();
     });
 
-    // glidejs function for games section
+    // featured games
     document.addEventListener('DOMContentLoaded', function () {
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 4,
-            draggable: true,
-            type: 'carousel',
-            autoplay: 3500,
-            perView: 3,
-            focusAt: 'center',
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next',
+    new Glider(document.querySelector('#glide1'), {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        draggable: true,
+        // dots: '.dots',
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+        },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
             },
-            breakpoints: {
-                800: {
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false
-                    },
-                    slidesToShow: 2,
-                },
-                480: {
+            {
+                breakpoint: 550,
+                settings: {
                     slidesToShow: 1,
+                    draggable: true,
+                    // dots: true
                 }
             }
-        });
+        ]
     });
+});
 
 </script>
 

@@ -50,6 +50,18 @@ const products2 = [
     { image: "./images/kids_worship_essecials.png", title: "Match it! Back to School Edition", category: "countdowns", discount: "50" }
 ];
 
+const products3= [ 
+    {image: "./images/feature_game_1.png", title: "Match it! Back to School Edition"},
+    {image: "./images/feature_game_2.png", title: "Match it! Back to School Edition"},
+    {image: "./images/feature_game_3.png", title: "Match it! Back to School Edition"},
+    {image: "./images/feature_game_4.png", title: "Match it! Back to School Edition"},
+    { image: "./images/this_is_our_god.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
+    { image: "./images/play_the_game.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
+    { image: "./images/match_it.png", title: "Match it! Back to School Edition", category: "motions", discount: "50" },
+    { image: "./images/pumpkin_prayer.png", title: "Match it! Back to School Edition", category: "kids-videos" },
+
+]
+
 const container = document.getElementById("product-container");
 const container2 = document.getElementById("product-container2");
 
@@ -113,3 +125,58 @@ document.querySelectorAll(".blue_tab").forEach(tab => {
 
 
 
+
+
+// produkt cards section , calling cards from here .
+const sliderContainer = document.querySelector("#glide2"); 
+
+function loadSliderWithProducts(products3) {
+    sliderContainer.innerHTML = ""; 
+
+    products3.forEach(product => { 
+        const productCard = document.createElement("product-card");
+        productCard.setAttribute("image", product.image);
+        productCard.setAttribute("title", product.title);
+        productCard.setAttribute("category", product.category);
+        if (product.discount) {
+            productCard.setAttribute("discount", product.discount);
+        }
+
+        const wrapperDiv = document.createElement("div");
+        wrapperDiv.appendChild(productCard);
+
+        sliderContainer.appendChild(wrapperDiv);
+    });
+
+    new Glider(sliderContainer, {
+        slidesToShow: 4, 
+        slidesToScroll: 1,
+        draggable: true,
+        dots: ".dots",
+        arrows: {
+            prev: ".glider-prev",
+            next: ".glider-next"
+        },
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: { slidesToShow: 5 }
+            },
+            {
+                breakpoint: 1024, 
+                settings: { slidesToShow: 4 }
+            },
+            {
+                breakpoint: 768, 
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 480, 
+                settings: { slidesToShow: 1 }
+            }
+        ]
+    });
+}
+
+
+loadSliderWithProducts(products3);
