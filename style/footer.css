@@ -44,7 +44,10 @@ footer::after{
     }
     
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:900px) {
+    .footer_section{
+        margin-top: 0;
+    }
     .footer_upper_image{
         display: none;
     }
@@ -109,6 +112,7 @@ input[type=email] {
         display: flex;
         align-items: center;
     }
+    
 
     .social-buttons {
         justify-content: center !important;
@@ -125,6 +129,14 @@ input[type=email] {
     }
 
 }
+
+@media only screen and (max-width: 470px) {
+    .footer-col-4 .search-bar input::after {
+    right: -9.5%;
+    background-color: red;
+    /* font-size: 12px;
+    margin: 0 auto; */
+    }}
 
 .footer-text {
     font-family: "Work Sans", serif;

@@ -84,6 +84,16 @@
 .margin-bottom-75{
     margin-bottom: 75px;
 }
+.margin-bottom-100{
+
+    margin-bottom: 100px;
+}
+@media  only screen and (max-width:750px){
+   .margin-bottom-100{
+    margin-bottom: 40px;
+   }
+    
+}
 
 .no-padding {
     padding: 0;

@@ -76,7 +76,7 @@
             </div>
             <div class="nav_buttons primary_button gap-20">
                 <img src="./images/login.png" alt="user_login" />
-                <img src="./images/shoppingCart.png" alt="shopping_Cart" />
+                <img src="./images/shoppingCart.png" alt="shopping_Cart" class="shopping_cart" />
 
             </div>
 
@@ -119,10 +119,61 @@
     </div>
     <br>
 
-    <div style="text-align:center " class="padding-20">
+    <div style="text-align:center ">
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)">
+            <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_852_9605)">
+                    <rect x="85.4663" y="37.4629" width="59.7834" height="59.7834" rx="25.6288"
+                        transform="rotate(135 85.4663 37.4629)" fill="#FF3DA1"></rect>
+                </g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M41.567 39.4159C41.5341 39.4199 41.5041 39.747 41.4701 39.752C41.5589 39.8254 41.6468 39.8997 41.734 39.975C41.8956 40.058 42.0549 40.1454 42.2117 40.2371C43.0521 40.7276 43.8681 41.259 44.6566 41.8293C46.2458 42.9895 47.6411 44.3247 48.8216 45.9369C48.9154 46.0606 48.9747 46.2069 48.9935 46.361C49.0884 46.584 49.0864 46.8521 48.9135 47.1311C47.6291 49.2074 45.913 46.531 44.9304 45.5309C44.4245 45.0184 43.9073 44.5172 43.3792 44.0276L40.3976 41.9893C39.4221 41.3222 38.1027 40.7161 37.529 39.599C37.2361 39.0249 37.543 38.4738 37.9728 38.2508C38.5355 37.4207 39.7859 36.9116 40.5475 36.3585C41.4935 35.672 42.4018 34.9348 43.2682 34.1502C44.2498 33.094 45.2933 32.0499 46.1069 30.8547C46.5037 30.2726 46.8045 29.6475 47.0824 28.9964C47.3013 28.4833 47.4562 27.7522 47.892 27.3792C48.5647 26.8001 49.4653 27.1851 49.927 27.8792C51.4283 30.1396 48.2079 32.6299 46.9585 34.0091C45.906 35.1703 44.8555 36.3145 43.681 37.2876L43.827 37.2896C43.2053 37.6657 42.6915 38.2458 42.1018 38.6718L41.567 39.4159Z"
+                    fill="white"></path>
+                <defs>
+                    <filter id="filter0_d_852_9605" x="0.145071" y="0.109889" width="86.0961" height="86.0963"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"></feColorMatrix>
+                        <feOffset dy="5.69529"></feOffset>
+                        <feGaussianBlur stdDeviation="5.69529"></feGaussianBlur>
+                        <feComposite in2="hardAlpha" operator="out"></feComposite>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_9605"></feBlend>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_9605" result="shape">
+                        </feBlend>
+                    </filter>
+                </defs>
+            </svg>
+
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+            <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_852_9610)">
+                    <rect x="1.03076" y="38.0576" width="59.7834" height="59.7834" rx="25.6288"
+                        transform="rotate(-45.7047 1.03076 38.0576)" fill="#FF3DA1"></rect>
+                </g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M46.3509 35.5755C46.3839 35.5715 46.4139 35.2445 46.4479 35.2395C46.3591 35.1661 46.2711 35.0917 46.184 35.0164C46.0224 34.9334 45.8631 34.846 45.7062 34.7544C44.8658 34.2638 44.0499 33.7325 43.2614 33.1621C41.6722 32.002 40.2768 30.6668 39.0964 29.0545C39.0026 28.9309 38.9433 28.7846 38.9245 28.6305C38.8295 28.4074 38.8315 28.1394 39.0045 27.8604C40.2888 25.784 42.005 28.4604 42.9875 29.4606C43.4935 29.973 44.0107 30.4742 44.5388 30.9638L47.5204 33.0021C48.4959 33.6692 49.8153 34.2753 50.389 35.3925C50.6818 35.9666 50.375 36.5176 49.9452 36.7407C49.3825 37.5708 48.1321 38.0799 47.3704 38.633C46.4244 39.3195 45.5162 40.0567 44.6497 40.8413C43.6682 41.8974 42.6247 42.9416 41.8111 44.1368C41.4143 44.7189 41.1134 45.344 40.8356 45.9951C40.6167 46.5081 40.4618 47.2392 40.026 47.6123C39.3533 48.1914 38.4527 47.8063 37.9909 47.1122C36.4897 44.8519 39.7101 42.3615 40.9595 40.9823C42.012 39.8211 43.0625 38.677 44.2369 37.7038L44.091 37.7018C44.7127 37.3258 45.2265 36.7457 45.8162 36.3196L46.3509 35.5755Z"
+                    fill="white"></path>
+                <defs>
+                    <filter id="filter0_d_852_9610" x="0.252982" y="0.185573" width="86.0956" height="86.0951"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"></feColorMatrix>
+                        <feOffset dy="5.69529"></feOffset>
+                        <feGaussianBlur stdDeviation="5.69529"></feGaussianBlur>
+                        <feComposite in2="hardAlpha" operator="out"></feComposite>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_9610"></feBlend>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_9610" result="shape">
+                        </feBlend>
+                    </filter>
+                </defs>
+            </svg>
+        </a>
     </div>
 
 
@@ -218,7 +269,7 @@
 
     <!-- 
     tabs with image 2 -->
-    <div class="tabs-container padding-top-30  flex padding-bottom-20">
+    <div class="tabs-container padding-top-30  flex padding-bottom-20 margin-bottom-100">
         <h2 class="uppercase blue padding-bottom-20  text-align">THe Latest</h2>
         <div class="tabs-blocks flex">
             <div className="tabs ">
@@ -271,10 +322,12 @@
     </div>
 
     <!-- Swiper Container -->
-    <!---->
+    <!--featured games not exactly like in the design ,-->
     <div class="featured_games margin-top-30">
         <h2 class="blue flex margin-bottom-20">Featured Products</h2>
-        <div class="swiper-container margin-top-20">
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+            centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
+            coverflow-effect-depth="100" coverflow-effect-modifier="1">
             <div class="swiper swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
@@ -287,15 +340,72 @@
                     <div class="swiper-slide"><img src="./images/feature_game_3.png" alt="Game 3"></div>
                     <div class="swiper-slide"><img src="./images/feature_game_4.png" alt="Game 4"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next">
+                    <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_852_9605)">
+                            <rect x="85.4663" y="37.4629" width="59.7834" height="59.7834" rx="25.6288"
+                                transform="rotate(135 85.4663 37.4629)" fill="#FF3DA1"></rect>
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M41.567 39.4159C41.5341 39.4199 41.5041 39.747 41.4701 39.752C41.5589 39.8254 41.6468 39.8997 41.734 39.975C41.8956 40.058 42.0549 40.1454 42.2117 40.2371C43.0521 40.7276 43.8681 41.259 44.6566 41.8293C46.2458 42.9895 47.6411 44.3247 48.8216 45.9369C48.9154 46.0606 48.9747 46.2069 48.9935 46.361C49.0884 46.584 49.0864 46.8521 48.9135 47.1311C47.6291 49.2074 45.913 46.531 44.9304 45.5309C44.4245 45.0184 43.9073 44.5172 43.3792 44.0276L40.3976 41.9893C39.4221 41.3222 38.1027 40.7161 37.529 39.599C37.2361 39.0249 37.543 38.4738 37.9728 38.2508C38.5355 37.4207 39.7859 36.9116 40.5475 36.3585C41.4935 35.672 42.4018 34.9348 43.2682 34.1502C44.2498 33.094 45.2933 32.0499 46.1069 30.8547C46.5037 30.2726 46.8045 29.6475 47.0824 28.9964C47.3013 28.4833 47.4562 27.7522 47.892 27.3792C48.5647 26.8001 49.4653 27.1851 49.927 27.8792C51.4283 30.1396 48.2079 32.6299 46.9585 34.0091C45.906 35.1703 44.8555 36.3145 43.681 37.2876L43.827 37.2896C43.2053 37.6657 42.6915 38.2458 42.1018 38.6718L41.567 39.4159Z"
+                            fill="white"></path>
+                        <defs>
+                            <filter id="filter0_d_852_9605" x="0.145071" y="0.109889" width="86.0961" height="86.0963"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="5.69529"></feOffset>
+                                <feGaussianBlur stdDeviation="5.69529"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_9605">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_9605"
+                                    result="shape"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="swiper-button-prev">
+                    <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_852_9605)">
+                            <rect x="85.4663" y="37.4629" width="59.7834" height="59.7834" rx="25.6288"
+                                transform="rotate(135 85.4663 37.4629)" fill="#FF3DA1"></rect>
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M41.567 39.4159C41.5341 39.4199 41.5041 39.747 41.4701 39.752C41.5589 39.8254 41.6468 39.8997 41.734 39.975C41.8956 40.058 42.0549 40.1454 42.2117 40.2371C43.0521 40.7276 43.8681 41.259 44.6566 41.8293C46.2458 42.9895 47.6411 44.3247 48.8216 45.9369C48.9154 46.0606 48.9747 46.2069 48.9935 46.361C49.0884 46.584 49.0864 46.8521 48.9135 47.1311C47.6291 49.2074 45.913 46.531 44.9304 45.5309C44.4245 45.0184 43.9073 44.5172 43.3792 44.0276L40.3976 41.9893C39.4221 41.3222 38.1027 40.7161 37.529 39.599C37.2361 39.0249 37.543 38.4738 37.9728 38.2508C38.5355 37.4207 39.7859 36.9116 40.5475 36.3585C41.4935 35.672 42.4018 34.9348 43.2682 34.1502C44.2498 33.094 45.2933 32.0499 46.1069 30.8547C46.5037 30.2726 46.8045 29.6475 47.0824 28.9964C47.3013 28.4833 47.4562 27.7522 47.892 27.3792C48.5647 26.8001 49.4653 27.1851 49.927 27.8792C51.4283 30.1396 48.2079 32.6299 46.9585 34.0091C45.906 35.1703 44.8555 36.3145 43.681 37.2876L43.827 37.2896C43.2053 37.6657 42.6915 38.2458 42.1018 38.6718L41.567 39.4159Z"
+                            fill="white"></path>
+                        <defs>
+                            <filter id="filter0_d_852_9605" x="0.145071" y="0.109889" width="86.0961" height="86.0963"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="5.69529"></feOffset>
+                                <feGaussianBlur stdDeviation="5.69529"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_852_9605">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_852_9605"
+                                    result="shape"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
             </div>
-        </div>
+        </swiper-container>
     </div>
 
     <!-- Testimonials Section -->
     <section class="testimonial-section ">
-        <h2 class="pink flex text-align padding-bottom-20">WHAT THEY SAY ABOUT US</h2>
+        <h2 class="pink flex text-align padding-top-30 padding-top-20">WHAT THEY SAY ABOUT US</h2>
 
         <div id="testimonial-slider" class="splide">
             <div class="splide__track">
@@ -303,7 +413,7 @@
                     <div class="splide__slide">
                         <div class="testimonial-card blue_backround ">
                             <!-- <div class="quote">❝</div> -->
-                            <img src="./images/mobile_quotes.png" />
+                            <img src="./images/mobile_quotes.png" alt="testemonies quote" />
                             <h3>Darlene Robertson</h3>
                             <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
@@ -311,7 +421,7 @@
                     <div class="splide__slide">
                         <div class="testimonial-card pink_background">
                             <!-- <div class="quote">❝</div> -->
-                            <img src="./images/mobile_quotes.png" />
+                            <img src="./images/mobile_quotes.png" alt="testemonies quote" />
                             <h3>Annette Black</h3>
                             <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
@@ -319,7 +429,7 @@
                     <div class="splide__slide">
                         <div class="testimonial-card lightblue">
                             <!-- <div class="quote">❝</div> -->
-                            <img src="./images/mobile_quotes.png" />
+                            <img src="./images/mobile_quotes.png" alt="testemonies quote" />
                             <h3>Theresa Webb</h3>
                             <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
@@ -327,7 +437,7 @@
                     <div class="splide__slide">
                         <div class="testimonial-card orange">
                             <!-- <div class="quote">❝</div> -->
-                            <img src="./images/mobile_quotes.png" />
+                            <img src="./images/mobile_quotes.png" alt="testemonies quote" />
                             <h3>Leslie Alexander</h3>
                             <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
@@ -486,29 +596,33 @@
         var swiper = new Swiper('.swiper', {
             effect: 'coverflow',
             grabCursor: true,
-            arrows: true,
             centeredSlides: true,
             slidesPerView: 5,
-            coverflow: {
+            loop: true,
+            coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
                 slideShadows: true
             },
-            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                1024: { slidesPerView: 4 },
-                768: { slidesPerView: 2, },
-                480: { slidesPerView: 1 },
+                1024: {
+                    slidesPerView: 4
+                },
+                550: {
+                    slidesPerView: 1,
+                    loop: false,
+                    centeredSlides: false,
+                },
             },
-
         });
     });
+
 
     // testiomonies 
     document.addEventListener('DOMContentLoaded', function () {
@@ -550,11 +664,9 @@
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        draggable: true,
                         arrows: false
                     },
                     slidesToShow: 2,
-                    draggable: true,
                 },
                 480: {
                     slidesToShow: 1,
