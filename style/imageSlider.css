@@ -3,6 +3,7 @@
   max-width: 100%;
   position: relative;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .mySlides {
@@ -10,10 +11,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 603px;
 }
 
 .mySlides img {
   width: 80%;
+  /* max-height: 603px; */
+  height: 100%;
+  object-fit: cover;
   z-index: 9;
   position: relative;
 }
@@ -23,7 +29,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: url("../images/homepage_banner_pseudo_prev.png") !important;
+  background-image: url("../images/homepage_banner_pseudo_prev.png") !important;
   background-repeat: no-repeat;
   z-index: 1;
   position: absolute;
@@ -33,9 +39,9 @@
 .mySlides::after {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: url("../images/homepage_banner_pseudo_next.png") !important;
+  width:518px;
+  height: 80%;
+  background-image: url("../images/homepage_banner_pseudo_next.png") !important;
   background-repeat: no-repeat;
   z-index: 1;
   right: 0;
@@ -43,12 +49,15 @@
 
 @media screen and (max-width:1120px) {
   .mySlides::before {
-    height: 250px;
+    height: 100%;
     left: -14px;
+    top: 20%;
   }
 
   .mySlides::after {
-    height: 250px;
+    height: 100%;
+        top: 20%;
+    
   }
 }
 
@@ -56,10 +65,13 @@
 
   .mySlides::before,
   .mySlides::after {
-    display: none;
-    opacity: 0;
+    display: none !important;
+    opacity: 0 !important;
   }
 
+  .mySlides{
+    height: 350px;
+  }
   .mySlides img {
     width: 95%;
   }
@@ -71,6 +83,16 @@
     width: 95%;
 
   }
+}
+@media only screen and (max-width:550px) {
+  .slideshow-container{
+    margin-top: 0;
+    padding-top: 20px !important;
+  }
+  .mySlides{
+    height: 180px;
+  }
+  
 }
 
 .prev,
@@ -237,6 +259,99 @@ div#testimonial-slider-track {
 
 
 /* ////////slider featured images */
+
+
+
+/* Glide.js Styling */
+/* .featured_games_section{
+  position: relative;
+  margin: 0 auto;
+
+text-align: center;
+}
+.featured_games_section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100% !important;
+  height: 500px;
+  background-color: #4DEBFF;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media only screen and (max-width:950px){
+  .featured_games_section::before{
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+} */
+
+ /*.featured_games_section .glide {
+  width: 70%;
+  max-width: 100%; 
+  position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}*/
+
+ /*.featured_games_section .glide .glide__slide {
+  display: flex;
+  justify-content: center;
+   align-items: center;
+ transition: transform 0.5s ease, opacity 0.5s ease;
+  perspective: 1000px; 
+}*/
+
+/* .featured_games_section .glide .glide__slide img {
+  width: 300px;
+  height: 302px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: block;
+}
+
+/* Center slide effect */
+/* .featured_games_section .glide .glide__slide--active img {
+  transform: scale(1.2) rotateY(0deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+} */
+
+/* Side slides effect */
+/* .glide__slide:not(.glide__slide--active) img {
+  transform: scale(0.9) rotateY(-15deg);
+  opacity: 0.7;
+} */
+
+/* Navigation Arrows */
+/* .glide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FF0080;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.glide__arrow--left {
+  left: -60px;
+}
+
+.glide__arrow--right {
+  right:-60px}  */
+
 .featured_games {
   position: relative;
   text-align: center;
@@ -245,6 +360,7 @@ div#testimonial-slider-track {
 }
 
 @media screen and (max-width:950px) {
+  
   .featured_games {
     width: 90%;
     margin: 0 auto;
@@ -261,21 +377,21 @@ div#testimonial-slider-track {
   width: 75%;
 } */
 
-.swiper {
+.featured_games .swiper {
   width: 90%;
   margin: auto;
   padding-top: 20px;
 
 }
 
-.swiper-slide {
+.featured_games .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 
-.swiper-slide img {
+.featured_games .swiper .swiper-slide  img {
   width: 100%;
   max-width: 300px !important;
   transition: transform 0.3s ease-in-out;
@@ -283,8 +399,8 @@ div#testimonial-slider-track {
 
 @media only screen and (max-width:750px) {
 
-  .swiper-button-prev,
-  .swiper-button-next {
+  .featured_games .swiper .swiper-button-prev,
+  .featured_games .swiper .swiper-button-next {
     display: none !important;
     opacity: 0;
   }
@@ -304,8 +420,10 @@ div#testimonial-slider-track {
   bottom: -70px;
   left: 0;
   width: 100% !important;
-  height: 100%;
-  background: url("../images/featured_games_background.png");
+  height: 391px;
+  background-color: #4DEBFF;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
   background-size: cover;
   z-index: -1;
 }
@@ -317,6 +435,8 @@ div#testimonial-slider-track {
 
   .featured_games::before {
     bottom: -20%;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .swiper-container {
@@ -333,6 +453,7 @@ div#testimonial-slider-track {
   height: 300px;
   transition: transform 0.3s ease-in-out;
 }
+
 
 .swiper-slide img {
   width: 100%;
@@ -432,9 +553,13 @@ div#testimonial-slider-track {
   font-weight: 300;
 }
 .game_images_container .glider .glider-track .glider-slide .product-card  h4{
-  font-size: 12px;
+  font-size: 16px;
 }
 @media screen and (max-width: 680px) {
+  
+.game_images_container .glider .glider-track .glider-slide .product-card  h4{
+  font-size: 12px;
+}
   .glider-slide {
     padding: 8px;
   }

@@ -73,7 +73,7 @@ p {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
@@ -84,23 +84,23 @@ p {
     content: "";
     position: absolute;
     width: 30px;
-    height: 50px;
+    height: 55px;
     background-image: url("../images/primary_button_before.png");
     left: -15px;
     top: 0;
     background-repeat: no-repeat;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .primary_button::after{
     content: "";
     position: absolute;
-    /* width: 30px; */
-    height: 50px;
+    width: 30px;
+    height: 55px;
     background-image: url("../images/prmary_button_after.png") ;
-    right: -40px;
+    right: -26px;
     top: 0;
     background-repeat: no-repeat;
-    padding: 20px;
+    /* padding: 20px; */
 }
 @media only screen and (max-width:1469px){
     .primary_button{
@@ -147,8 +147,16 @@ p {
     position: absolute;
     height: 50px;
     background-image: url("../images/secondary_button_after.png") ;
-    right: -38px;
+    right: -57px;
     top: 0;
     background-repeat: no-repeat;
     padding: 20px;
+    width: 20px;
+}
+
+.border-round-top-radius{
+    border-top-left-radius: 40%;
+}
+.border-round-bottom-radius{
+    border-bottom-right-radius: 20%;
 }

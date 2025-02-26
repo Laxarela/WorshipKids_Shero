@@ -24,19 +24,24 @@
     <link rel="stylesheet" href="./style/card.css">
     <link rel="stylesheet" href="./style/blogCards.css">
 
-    <!-- glidejs  install-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js/glider.min.css">
+    <!-- glidejrs  install-->
+    <!-- Glide.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <!-- glider -->
+     <!-- Glider.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- splide -->
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css"
+    <!-- <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" /> -->
 
 
 
@@ -103,7 +108,7 @@
 
 
     <!-- Slideshow container -->
-    <div class="slideshow-container flex padding-top-20 glider-first">
+    <div class="slideshow-container flex padding-top-50">
         <div class="mySlides fade">
             <img src="./images/banner-image.jpg" alt="homepage banener slider">
         </div>
@@ -207,12 +212,15 @@
             </div>
 
         </div>
-        <div class="product-container flex " id="product-container"></div>
+        <div class="tabs_products_container">
+            <div class="product-container flex " id="product-container"></div>
+        </div>
+       
 
     </div>
 
     <!-- image and text moving section -->
-    <div class="game-card  background-shapes margin-top-20  padding-top-10">
+    <div class="game-card  background-shapes margin-top-100  padding-top-10 lunchbox_height border-round-bottom-radius border-round-top-radius ">
         <div class="scroller" data-direction="right" data-speed="slow">
             <div class="scroller__inner">
                 <img src="./images/play_for_free.png" alt="play_for_free" />
@@ -323,10 +331,9 @@
 
     <!-- Swiper Container -->
     <!-- featured games not exactly like in the design ,-->
-    <div class="featured_games margin-top-30">
+     <div class="featured_games margin-top-30">
         <h2 class="blue flex margin-bottom-20">Featured Products</h2>
-         <swiper-container class="mySwiper">
-            <div class="swiper swiper">
+            <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="./images/feature_game_1.png" alt="Game 1"></div>
                     <div class="swiper-slide"><img src="./images/feature_game_2.png" alt="Game 2"></div>
@@ -398,10 +405,8 @@
                     </svg>
                 </div>
             </div>
-        </swiper-container> 
+    </div> 
 
-
-    </div>
     
 
     <!-- Testimonials Section -->
@@ -450,7 +455,7 @@
 
     <!-- image carausel -->
     <div class="game_images_container">
-        <h2 class="blue flex">Featured Products</h2>
+        <h2 class="blue flex">NEW Products</h2>
         <div class="glider-contain">
             <button class="glider-prev">‹</button>
             <button class="glider-next">›</button>
@@ -559,8 +564,10 @@
 
 </body>
 <script src="./js/homepage.js"></script>
-<!-- GLIDEJS -->
-<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+   <!-- Glide.js -->
+   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+   <!-- Glider.js -->
+   <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <!-- SWIPER -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- SPLIDEJS -->
@@ -571,36 +578,47 @@
 <!-- blog post card creation -->
 <script src="./js/blogPost.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var swiper = new Swiper('.swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 5,
-            loop: true,
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 4
-                },
-                550: {
-                    slidesPerView: 1,
-                    loop: false,
-                    centeredSlides: false,
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper', {
+        grabCursor: true,
+        loop: false,
+        centeredSlides: true, // Center the active slide
+        initialSlide: 3,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                effect: 'coverflow',
+                centeredSlides: true,
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
                 },
             },
-        });
+            750: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                effect: 'slide', 
+                centeredSlides: false,
+            },
+            // Mobile (1 slide, no coverflow)
+            550: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                effect: 'slide', 
+                centeredSlides: false,
+            },
+        },
     });
+});
+
 
 
     // testiomonies 
@@ -626,34 +644,57 @@
     });
 
     // featured games
-    document.addEventListener('DOMContentLoaded', function () {
-    new Glider(document.querySelector('#glide1'), {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        draggable: true,
-        // dots: '.dots',
-        arrows: {
-            prev: '.glider-prev',
-            next: '.glider-next'
-        },
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1,
-                    draggable: true,
-                    // dots: true
-                }
-            }
-        ]
+//     document.addEventListener('DOMContentLoaded', function () {
+//     new Glider(document.querySelector('#glide1'), {
+//         slidesToShow: 5,
+//         slidesToScroll: 1,
+//         draggable: true,
+//         // dots: '.dots',
+//         arrows: {
+//             prev: '.glider-prev',
+//             next: '.glider-next'
+//         },
+//         responsive: [
+//             {
+//                 breakpoint: 1024,
+//                 settings: {
+//                     slidesToShow: 4
+//                 }
+//             },
+//             {
+//                 breakpoint: 550,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     draggable: true,
+//                     // dots: true
+//                 }
+//             }
+//         ]
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        startAt: 2,
+        perView: 4,
+        focusAt: 'center',
+        gap: 30,
     });
+
+// zooming the center
+    glide.on(['mount.after', 'run'], () => {
+        document.querySelectorAll('.glide__slide').forEach(slide => {
+            slide.classList.remove('glide__slide--active');
+        });
+
+        const activeIndex = glide.index % document.querySelectorAll('.glide__slide').length;
+        document.querySelectorAll('.glide__slide')[activeIndex].classList.add('glide__slide--active');
+    });
+
+    glide.mount();
 });
+
 
 </script>
 

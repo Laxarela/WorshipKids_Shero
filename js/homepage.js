@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeIcon = document.querySelector(".close-icon");
   const mobileNavLinks = document.querySelector(".nav-links"); 
   const body = document.body;
+  const slideImages = document.querySelectorAll(".mySlides img");
 
   function toggleMenu() {
       const isActive = mobileNavLinks.classList.toggle("active");
@@ -14,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Disable scroll when menu is open
       body.classList.toggle("no-scroll", isActive);
+
+      // Update z-index for slide images
+      slideImages.forEach(img => {
+          img.style.zIndex = isActive ? "0" : "9";
+      });
   }
 
   menuIcon.addEventListener("click", toggleMenu);

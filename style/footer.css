@@ -31,6 +31,7 @@ footer::after{
     gap: 55px;
     align-items: flex-start;
     text-align: start;
+    margin-bottom: 40px;
 }
 .input_button, .footer_input{
     display: block;
@@ -53,6 +54,7 @@ footer::after{
     }
     .footer-container{
         padding-top: 5px;
+        margin-bottom: 20px;
     }
     
 }

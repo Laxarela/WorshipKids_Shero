@@ -26,19 +26,20 @@
     background: url("../images/navbar_after.png");
     width: 100%;
     height: 8px;
-    top: 33%;
+    top: 238px;
+    border: none;
     z-index: 1;
 }
 
 @media only screen  and (min-width:2548px) and (max-width:2560px)  {
     .navbar::after{
-        top: 41%;
+        top: 243px;
     }
     
 }
-@media only screen  and (max-width:1440px)  {
+@media only screen  and (max-width:1125px)  {
     .navbar::after{
-        top: 71%;
+        top: 219px;
     }
     
 }
@@ -54,13 +55,14 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
     .navbar {
         background-size: cover;
         height: 300px;
     }
     .navbar::after{
-        top: 49%;
+        display: none;
+        opacity: 0;
     }
 }
 
@@ -87,25 +89,33 @@
 @media only screen and (max-width: 600px) {
     .nav-container {
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 15px;
 
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 350px) {
     .nav-container {
         flex-wrap: wrap;
-        gap: 40px !important;
+        justify-content:  center;
+        gap: 18px !important;
 
     }
 }
 
 .search-bar {
     border-top: 20px;
-    max-width: 500px;
+    /* max-width: 500px; */
+    max-width: 931px;
     width: 100%;
     height: 52px;
     position: relative;
+}
+@media  only screen and (min-width:1429px) 
+{.search-bar{
+    width: 795px;
+}
+    
 }
 .search-bar::before{
     content:"";
@@ -127,6 +137,22 @@
     height: 52px;
 }
 
+@media only  screen and (min-width:1467px) {
+    .search-bar::before{
+        left: -1%;
+    }
+    .search-bar::after{
+        right: -2.5%;
+    }
+    
+}
+@media only screen and (max-width:450px) {
+    .search-bar::after{
+    right: -8.5%;;
+    }
+    
+}
+
 @media only screen and (max-width:1469px) {
     .search-bar {
         max-width: 500px;
@@ -146,6 +172,7 @@
     }
     
 }
+
 /* hide desktop input on mobile version */
 @media only screen and (max-width: 1126px) {
     .search-bar {
@@ -164,13 +191,13 @@ input[type=text] {
     font-size: 16px;
     background-color: #FFFFFF;
     background-image: url('../images/search_icon.png');
-    background-position: 36px 10px;
+    background-position: 14px 16px;
     background-repeat: no-repeat;
     font-family: "Work Sans", serif;
     font-weight: 600;
     line-height: 18.77px;
     color: rgba(64, 200, 244, 1);
-    padding: 12px 20px 12px 80px;
+    padding: 12px 20px 12px 40px;
     height: 52px;
 }
 
@@ -178,12 +205,12 @@ input[type=text] {
 .secondary_nav {
     width: 90%;
     padding-top: 30px;
-    gap: 30px;
+    gap: 45px;
 }
 
 @media only screen and (max-width: 1500px) and (min-width: 1470px) {
     .secondary_nav {
-        gap: 10px;
+        gap: 60px;
     }
 }
 
@@ -216,9 +243,9 @@ input[type=text] {
     .nav-container {
         width: 90%;
     }
-    .nav-container{
+    /* .nav-container{
         gap: 30px;
-    }
+    } */
 }
 
 .nav-links {
