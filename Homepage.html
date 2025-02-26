@@ -580,6 +580,9 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
         grabCursor: true,
         loop: false,
         centeredSlides: true, // Center the active slide
@@ -608,12 +611,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 effect: 'slide', 
                 centeredSlides: false,
             },
-            // Mobile (1 slide, no coverflow)
             550: {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 10,
-                effect: 'slide', 
-                centeredSlides: false,
+                effect: 'coverflow', 
+                centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                effect: 'coverflow', 
+                centeredSlides: true,
             },
         },
     });
@@ -673,27 +681,26 @@ document.addEventListener('DOMContentLoaded', function () {
 //     });
 // });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const glide = new Glide('.glide', {
-        type: 'carousel',
-        startAt: 2,
-        perView: 4,
-        focusAt: 'center',
-        gap: 30,
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//     const glide = new Glide('.glide', {
+//         type: 'carousel',
+//         startAt: 2,
+//         perView: 4,
+//         focusAt: 'center',
+//         gap: 30,
+//     });
 
-// zooming the center
-    glide.on(['mount.after', 'run'], () => {
-        document.querySelectorAll('.glide__slide').forEach(slide => {
-            slide.classList.remove('glide__slide--active');
-        });
+//     glide.on(['mount.after', 'run'], () => {
+//         document.querySelectorAll('.glide__slide').forEach(slide => {
+//             slide.classList.remove('glide__slide--active');
+//         });
 
-        const activeIndex = glide.index % document.querySelectorAll('.glide__slide').length;
-        document.querySelectorAll('.glide__slide')[activeIndex].classList.add('glide__slide--active');
-    });
+//         const activeIndex = glide.index % document.querySelectorAll('.glide__slide').length;
+//         document.querySelectorAll('.glide__slide')[activeIndex].classList.add('glide__slide--active');
+//     });
 
-    glide.mount();
-});
+//     glide.mount();
+// });
 
 
 </script>

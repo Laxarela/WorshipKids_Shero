@@ -270,8 +270,8 @@ input[type=email] {
 
 @media only screen and (max-width:750px) {
     .cosmic_wonder {
-        width: 90% !important;
-        /* padding: 22px; */
+        width: 87% !important;
+        padding: 22px;
     }
 }
 

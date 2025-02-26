@@ -100,12 +100,14 @@
     background-size: cover;
     border-bottom-right-radius: 20%;
     width: 100%;
+    margin: 0 auto;
 
 }
 .product-container {
     flex-wrap: wrap;
-    max-width: 1628px;
-    /* width: 90%; */
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1400px;
     gap: 24px;
     object-fit: cover;
     padding: 90px 20px ;

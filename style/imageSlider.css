@@ -310,11 +310,21 @@ div#testimonial-slider-track {
 }
 
 @media only screen and (max-width:750px) {
+  .featured_games .swiper .swiper-slide{
+    width: 400px !important;
+  }
 
   .featured_games .swiper .swiper-button-prev,
   .featured_games .swiper .swiper-button-next {
     display: none !important;
     opacity: 0;
+  }
+
+}
+@media only screen and (max-width:450px) {
+  .featured_games .swiper .swiper-slide{
+    width: 300px !important;
+    gap: 30px;
   }
 
 }
@@ -340,7 +350,14 @@ div#testimonial-slider-track {
   z-index: -1;
 }
 
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}
 @media only screen and (max-width:750px) {
+  .featured_games::before {
+    height: 117px;
+    bottom: -5%;
+      }
   .featured_games {
     margin-bottom: 20px;
   }
