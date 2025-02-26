@@ -104,6 +104,7 @@
 }
 .product-container {
     flex-wrap: wrap;
+    max-width: 1628px;
     /* width: 90%; */
     gap: 24px;
     object-fit: cover;

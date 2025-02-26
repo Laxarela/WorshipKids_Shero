@@ -260,98 +260,6 @@ div#testimonial-slider-track {
 
 /* ////////slider featured images */
 
-
-
-/* Glide.js Styling */
-/* .featured_games_section{
-  position: relative;
-  margin: 0 auto;
-
-text-align: center;
-}
-.featured_games_section::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100% !important;
-  height: 500px;
-  background-color: #4DEBFF;
-  border-top-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  background-size: cover;
-  z-index: -1;
-}
-
-@media only screen and (max-width:950px){
-  .featured_games_section::before{
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-} */
-
- /*.featured_games_section .glide {
-  width: 70%;
-  max-width: 100%; 
-  position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}*/
-
- /*.featured_games_section .glide .glide__slide {
-  display: flex;
-  justify-content: center;
-   align-items: center;
- transition: transform 0.5s ease, opacity 0.5s ease;
-  perspective: 1000px; 
-}*/
-
-/* .featured_games_section .glide .glide__slide img {
-  width: 300px;
-  height: 302px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  display: block;
-}
-
-/* Center slide effect */
-/* .featured_games_section .glide .glide__slide--active img {
-  transform: scale(1.2) rotateY(0deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-} */
-
-/* Side slides effect */
-/* .glide__slide:not(.glide__slide--active) img {
-  transform: scale(0.9) rotateY(-15deg);
-  opacity: 0.7;
-} */
-
-/* Navigation Arrows */
-/* .glide__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #FF0080;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.glide__arrow--left {
-  left: -60px;
-}
-
-.glide__arrow--right {
-  right:-60px}  */
-
 .featured_games {
   position: relative;
   text-align: center;
@@ -364,6 +272,7 @@ flex-direction: column;
   .featured_games {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 40px;
 
   }
 
@@ -395,6 +304,9 @@ flex-direction: column;
   width: 100%;
   max-width: 300px !important;
   transition: transform 0.3s ease-in-out;
+}
+.featured_games .swiper .swiper-slide--active  img {
+  transform: scale(0.5);
 }
 
 @media only screen and (max-width:750px) {
@@ -441,6 +353,14 @@ flex-direction: column;
 
   .swiper-container {
     width: 80%;
+  }
+
+}
+@media only screen and (max-width:500px) {
+
+  .featured_games::before {
+height: 117px;
+bottom: -5%;
   }
 
 }
