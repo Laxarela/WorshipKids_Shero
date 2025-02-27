@@ -30,17 +30,18 @@ const products = [
     { image: "./images/pumpkin_prayer.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
     { image: "./images/play_the_game.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
     { image: "./images/school_bus.png", title: "Match it! Back to School Edition", category: "motions", discount: "50" },
-    { image: "./images/gone_fishing.png", title: "Under The Sea", category: "games", discount: "50" },
+    { image: "./images/gone_fishing.png", title: "Under The Sea", category: "stillbackground", discount: "50" },
     { image: "./images/under_the_sea.png", title: "Match it! Back to School Edition", category: "kids-videos" }, 
     { image: "./images/kids_construction.png", title: "Match it! Back to School Edition", category: "curriculum", discount: "50" },
     { image: "./images/kids_thanksgiving.png", title: "Match it! Back to School Edition", category: "countdowns" },
-    { image: "./images/kids_worship_essecials.png", title: "Match it! Back to School Edition", category: "countdowns", discount: "50" }
+    { image: "./images/kids_worship_essecials.png", title: "Match it! Back to School Edition", category: "countdowns", discount: "50" },
+    
 ];
 
 // images for the second tab gallery
 // Product data
 const products2 = [
-    { image: "./images/gone_fishing.png", title: "Under The Sea", category: "games", discount: "50" },
+    { image: "./images/gone_fishing.png", title: "Under The Sea", category: "stillbackground", discount: "50" },
     { image: "./images/this_is_our_god.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
     { image: "./images/play_the_game.png", title: "Match it! Back to School Edition", category: "games", discount: "50" },
     { image: "./images/match_it.png", title: "Match it! Back to School Edition", category: "motions", discount: "50" },

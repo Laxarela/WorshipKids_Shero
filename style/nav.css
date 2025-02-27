@@ -8,14 +8,16 @@
     flex-direction: column;
     align-items: center;
     background-size: cover;
+    width: 100%;
 }
 
 .navbar::before {
     content: "";
     position: absolute;
-    background: url("../images/navbar_shape.png");
-    width: 300px;
-    height: 100px;
+    background-image: url("../images/navbar_shape.png");
+    background-repeat: no-repeat;
+    width: 710px;
+    height: 300px;
     top: 0;
     left: 0;
     z-index: 1;
@@ -26,19 +28,20 @@
     background: url("../images/navbar_after.png");
     width: 100%;
     height: 8px;
-    top: 33%;
+    top: 238px;
+    border: none;
     z-index: 1;
 }
 
 @media only screen  and (min-width:2548px) and (max-width:2560px)  {
     .navbar::after{
-        top: 41%;
+        top: 243px;
     }
     
 }
-@media only screen  and (max-width:1440px)  {
+@media only screen  and (max-width:1125px)  {
     .navbar::after{
-        top: 71%;
+        top: 219px;
     }
     
 }
@@ -54,24 +57,30 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
     .navbar {
         background-size: cover;
-        height: 300px;
+        height: 217px;
     }
     .navbar::after{
-        top: 49%;
+        display: none;
+        opacity: 0;
+    }
+}
+@media only screen and (max-width:375px) {
+    .navbar{
+        height: 275px;
     }
 }
 
 /* first part of nav (logo,input,buttons) */
 .nav-container {
-    max-width: 100%;
-    width: 90%;
+    max-width: 1920px !important;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    z-index: 9;
+    z-index: 99;
 
 }
 
@@ -87,25 +96,47 @@
 @media only screen and (max-width: 600px) {
     .nav-container {
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 15px;
 
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 378px) {
     .nav-container {
         flex-wrap: wrap;
-        gap: 40px !important;
+        justify-content:  center;
+        gap: 18px !important;
 
     }
 }
 
 .search-bar {
     border-top: 20px;
-    max-width: 500px;
+    /* max-width: 500px; */
+    max-width: 931px;
     width: 100%;
     height: 52px;
     position: relative;
+}
+.icon-shape{
+    display: flex
+    ;
+        align-items: center;
+        justify-content: space-between;
+        width: 100px;
+        background:#5dd1f5;
+        padding: 12px 30px;
+    clip-path: polygon(100% 31.786%, 96.488% 83.571%, 96.488% 83.571%, 96.227% 86.331%, 95.837% 88.914%, 95.327% 91.294%, 94.71% 93.443%, 93.997% 95.335%, 93.201% 96.943%, 92.331% 98.24%, 91.4% 99.2%, 90.419% 99.796%, 89.4% 100%, 12.771% 100%, 12.771% 100%, 11.752% 99.796%, 10.771% 99.2%, 9.84% 98.24%, 8.971% 96.943%, 8.174% 95.335%, 7.461% 93.443%, 6.844% 91.294%, 6.335% 88.914%, 5.944% 86.331%, 5.683% 83.571%, 2.171% 31.786%, 2.171% 31.786%, 1.993% 26.904%, 2.13% 22.171%, 2.557% 17.675%, 3.25% 13.5%, 4.183% 9.732%, 5.33% 6.457%, 6.666% 3.761%, 8.167% 1.729%, 9.806% .446%, 11.558% 0%, 90.613% 0%, 90.613% 0%, 92.366% .446%, 94.005% 1.729%, 95.505% 3.761%, 96.841% 6.457%, 97.989% 9.732%, 98.921% 13.5%, 99.614% 17.675%, 100.041% 22.171%, 100.179% 26.904%, 100% 31.786%);    
+}
+@media  only screen and (min-width:1429px) 
+{.icon-shape{
+    width: 92px;
+}    
+}
+@media  only screen and (max-width:550) 
+{.search-bar{
+    width: 795px;
+}    
 }
 .search-bar::before{
     content:"";
@@ -127,6 +158,22 @@
     height: 52px;
 }
 
+@media only  screen and (min-width:1467px) {
+    .search-bar::before{
+        left: -1%;
+    }
+    .search-bar::after{
+        right: -2.5%;
+    }
+    
+}
+@media only screen and (max-width:450px) {
+    .search-bar::after{
+    right: -8.5%;;
+    }
+    
+}
+
 @media only screen and (max-width:1469px) {
     .search-bar {
         max-width: 500px;
@@ -142,10 +189,12 @@
 
 @media only screen and (max-width:550px) {
     .nav_buttons{
-        padding: 0 10px;
+        padding: 8px 14px;
+        margin-right: 0;
     }
     
 }
+
 /* hide desktop input on mobile version */
 @media only screen and (max-width: 1126px) {
     .search-bar {
@@ -164,26 +213,38 @@ input[type=text] {
     font-size: 16px;
     background-color: #FFFFFF;
     background-image: url('../images/search_icon.png');
-    background-position: 36px 10px;
+    background-position: 14px 16px;
     background-repeat: no-repeat;
     font-family: "Work Sans", serif;
     font-weight: 600;
     line-height: 18.77px;
     color: rgba(64, 200, 244, 1);
-    padding: 12px 20px 12px 80px;
+    padding: 12px 20px 12px 40px;
     height: 52px;
 }
 
 /* secondary nav whch has the links */
 .secondary_nav {
-    width: 90%;
+    max-width: 1920px;
+    width: 100%;
     padding-top: 30px;
-    gap: 30px;
+    gap: 100px;
+    z-index: 99;
+    justify-content: center !important;
 }
 
+.secondary_nav .nav-links{
+    gap: 45px;
+}
+@media only  screen and (max-width:1650px)  {
+    .secondary_nav .nav-links{
+        gap: 30px;
+    } 
+    
+}
 @media only screen and (max-width: 1500px) and (min-width: 1470px) {
     .secondary_nav {
-        gap: 10px;
+        gap: 60px;
     }
 }
 
@@ -217,7 +278,12 @@ input[type=text] {
         width: 90%;
     }
     .nav-container{
-        gap: 30px;
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width:375px) {
+    .nav-container{
+        flex-wrap: wrap;
     }
 }
 
@@ -270,7 +336,7 @@ input[type=text] {
 /* upper nav pink section */
 .mobile_upper_nav {
     display: none;
-    background-color: rgba(255, 61, 161, 1);
+    background-color: #FF3DA1;
     margin: 0;
     height: 35px;
     margin: 0 auto;
