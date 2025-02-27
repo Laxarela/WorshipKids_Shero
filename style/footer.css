@@ -27,18 +27,32 @@ footer::after{
 }
 .footer-container {
     flex-direction: row;
-    width: 90%;
+    max-width: 1920px;
+    width: 100%;
     gap: 55px;
     align-items: flex-start;
     text-align: start;
+    margin-bottom: 40px;
+    justify-content: space-around !important;
 }
 .input_button, .footer_input{
     display: block;
 }
-@media screen and (max-width:1024px) {
-    .footer_upper_image{
-        margin: 21px;
+
+@media only screen and (max-width:1500px) {
+    .footer-container{
+      justify-content: center  !important;
+      gap: 30px;
     }
+    
+}
+@media screen and (max-width:1124px) {
+    .footer_upper_image{
+       display: none;
+    }
+    
+}
+@media screen and (max-width:1024px) {
     .footer-container{
         padding-top: 20px;
     }
@@ -53,10 +67,22 @@ footer::after{
     }
     .footer-container{
         padding-top: 5px;
+        margin-bottom: 20px;
     }
     
 }
 
+.footer-col-4 .search-bar{
+    max-width: 502px !important;
+}
+@media only screen and (min-width: 1467px){
+    .footer-col-4 .search-bar::after{
+        right: -5.9%;
+        }
+        .footer-col-4 .search-bar::before{
+            left: -3%;
+            }
+}
 
 
 input[type=email] {
@@ -76,16 +102,40 @@ input[type=email] {
 }
 
 .footer-col-1 {
-    max-width: 319px; 
+    max-width: 355px; 
      width: 100%;
 }
 .footer-col-2{
     max-width: 175px;
   width: 100%;
+  display: flex;
+  align-self: flex-start;
 }
+
 .footer-col-3{
     max-width: 226px;
   width: 100%;
+  display: flex;
+  align-self: flex-start;
+
+}
+
+.footer-col-4{
+    max-width: 517px;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+align-self: flex-start;
+}
+@media only screen and (max-width: 1025px) {
+    .footer-col-2, .footer-col-3, .footer-col-4{
+      align-self: center;
+    }  
+  }
+.footer-col-4 .secondary_button::after{
+    right: -18.5px;
+    padding: 0;
+    height: 56px;
 }
 .footer-col-4 h2{
     white-space: nowrap;
@@ -103,7 +153,7 @@ input[type=email] {
         opacity: 0;
     }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1025px) {
     .footer-container {
         flex-direction: column;
         margin-top: 100px;
@@ -133,7 +183,6 @@ input[type=email] {
 @media only screen and (max-width: 470px) {
     .footer-col-4 .search-bar input::after {
     right: -9.5%;
-    background-color: red;
     /* font-size: 12px;
     margin: 0 auto; */
     }}
@@ -166,8 +215,16 @@ input[type=email] {
 
 .footer-credendials {
     justify-content: space-between !important;
-    width: 90%;
+    max-width: 1920px;
+    width: 100%;
     border-top: 1px solid rgba(248, 248, 248, 1);
+}
+.footer-credendials h4{
+    margin-left: 40px;
+}
+ .text_help{
+    margin-left: 0;
+    margin-right: 65px;
 }
 
 @media only screen and (max-width: 900px) {
