@@ -123,11 +123,10 @@
 @media only screen and (max-width:950px) {
     .product-container {
         border-bottom-right-radius: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+
     }
     .product-container product-card{
-        width: 174px;    }
+        width: 274px;    }
   }
   @media only screen and (max-width:750px) {
  .product-container{
@@ -139,15 +138,16 @@
     .product-container{
        gap: 12px;
        }
-
-       
+       .product-container product-card{
+        width: 174px;  }
+        
    }
 @media only screen and (max-width:378px) {
     .product-container{
          padding: 20px;
        }
        .product-container product-card{
-        width: 300px; }
+        width: 300px;}
        
    }
 

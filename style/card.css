@@ -237,6 +237,11 @@
     margin-top: 100px;
 }
 
+@media only screen and (max-width:1500px){
+.email_banner{
+    width: 90%;
+}
+}
 
 
 
@@ -258,7 +263,7 @@
 
 @media only screen and (max-width: 550px) {
     .email_banner{
-        height: 361px;
+        height: 500px;
     }
     .email_banner>.lunch_box_info {
         gap: 23px;
@@ -296,6 +301,7 @@
 @media only screen and (max-width:950px){
     .email_banner .reverse-flex .game-info{
         justify-content:  center;
+        padding: 10px;
     }
     .email_banner .reverse-flex .game-image img{
         height: 150px;
@@ -416,7 +422,7 @@ align-self: center;
 
 @media only screen and (max-width:750px) {
     .cosmic_wonder {
-        width: 87% !important;
+        width: 90% !important;
         padding: 22px;
         margin-bottom: 50px;
     }

@@ -232,6 +232,13 @@ align-self: flex-start;
         flex-direction: column;
         text-align: center;
     }
+    .footer-credendials h4{
+        margin-left: 0;
+    }
+     .text_help{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 }
 
