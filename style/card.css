@@ -420,6 +420,9 @@ align-self: center;
         padding: 22px;
         margin-bottom: 50px;
     }
+    .cosmic_wonder .lunch_box_info .game-info{
+        width: 90%;
+    }
 }
 
 .game-card && .email_banner {
