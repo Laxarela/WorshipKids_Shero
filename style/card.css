@@ -115,8 +115,9 @@
 }
 
 .lunch_box_info {
-    /* padding: 15px 0; */
-    padding: 40px 100px;
+    max-width: 1900px;
+    width: 100%;
+    padding: 40px 0;
 }
 
 .game-card .lunch_box_info .game-info .email_input {
@@ -142,6 +143,20 @@
 
 }
 
+@media only screen and (max-width: 450px){
+    .lunchbox_shuffle .game-image{
+        justify-content: center;
+
+    }
+    .lunchbox_shuffle>div{
+        gap: 23px;
+    }
+    .lunchbox_shuffle .lunch_box_info .game-info{
+        max-width: 341px;
+        padding: 0;
+    }
+
+}
 /* ///////////////////////testing youtube kevin slider image */
 .scroller {
     max-width: 100%;
@@ -200,20 +215,26 @@
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 80%;
+    max-width: 1653px;
+    width: 100%;
     margin: 0 auto;
-    height: 409px;
+    height: 431px;
     border-radius: 20px;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 }
+
+
+
 
 @media only screen and (max-width: 750px) {
     .email_banner{
         height: auto;
+        margin-top: 55px;
     }
     .email_banner>.lunch_box_info {
         flex-direction: column;
@@ -225,17 +246,36 @@
     }
 
 }
+
+@media only screen and (max-width: 550px) {
+    .email_banner{
+        height: 361px;
+    }
+    .email_banner>.lunch_box_info {
+        gap: 23px;
+    }
+
+}
 .email_banner .reverse-flex .game-info,  .email_banner .reverse-flex .game-image {
     display: flex;
     align-self: center;
+    justify-content: center;
 }
 .email_banner .reverse-flex .game-info{
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
+}
+.email_banner .reverse-flex .game-info button{
+    /* align-items: flex-start; */
+    width: 350px;
 }
 @media only screen and (max-width:550px)
 {
     .email_banner .reverse-flex .game-info{
         align-items: center;
+    }
+    .email_banner .reverse-flex .game-info p{
+       font-size: 12px !important;
     }
 }
 
@@ -251,6 +291,24 @@
     .email_banner .reverse-flex .game-image img{
         height: 150px;
         max-width: 325px;
+    }
+}
+@media only screen and (max-width:400px){
+    .email_banner{
+        height: auto;
+                margin-top: 100px;
+    }
+    .email_banner .reverse-flex{
+        gap: 0;
+    }
+    .email_banner .reverse-flex .game-image img{
+        top: -85px;
+    }
+    .email_banner .reverse-flex .game-info{
+        top: -56px;
+    }
+    .email_banner .reverse-flex .game-info .email_input, .email_banner .reverse-flex .game-info button {
+        max-width:311px ;
     }
 }
 .email_input {
@@ -305,10 +363,10 @@ input[type=email] {
 
 @media only screen and (max-width:450px) {
     .game-card .lunch_box_info .game-info .email_input::before{
-        left: -8%;
+        left: -5%;
     }
     .game-card .lunch_box_info .game-info .email_input::after{
-        right: -15%;
+        right: -9%;
     }
     input[type=email] {
         font-size: 12px;
@@ -318,6 +376,7 @@ input[type=email] {
     }
 
 }   
+
 
 
 .cosmic_wonder {
@@ -332,6 +391,18 @@ input[type=email] {
 .cosmic_wonder .lunch_box_info .game-info{
 align-self: center;
 }
+.cosmic_wonder .lunch_box_info .game-image img{
+     max-width: 903px;
+     width: 100%;
+}
+
+ .cosmic_wonder .lunch_box_info .game-info{
+    width: 65%;
+}
+/*.cosmic_wonder .lunch_box_info .game-image{
+    width: 64%;
+} */
+
 
 @media only screen and (max-width:750px) {
     .cosmic_wonder {
@@ -381,7 +452,7 @@ align-self: center;
 .game-image img {
     max-width: 704px;
     width: 100%;
-    height: 383px;
+    /* height: 383px; */
     display: block;
     border-radius: 15px;
 }
@@ -399,7 +470,7 @@ align-self: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 
 .game-info button {
@@ -407,6 +478,9 @@ align-self: center;
 }
 
 @media only screen and (max-width: 750px) {
+    .game-info button {
+        width: 351px;
+    }
     
     .game-info {
         padding-left: 0;
@@ -420,12 +494,12 @@ align-self: center;
 
 .game-subtitle {
     color: #555;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .game-description {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
     max-width: 500px;
     text-align: center;

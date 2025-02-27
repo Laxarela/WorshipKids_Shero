@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   z-index: 1;
   position: absolute;
-  left: -20px;
+  left: -80px;
 }
 
 .mySlides::after {
@@ -136,6 +136,7 @@
 .testimonial-section {
   text-align: center;
   padding: 50px 0;
+  max-width: 100%;
 }
 
 @media only screen and (max-width:550px) {
@@ -154,8 +155,9 @@
 }
 
 .splide {
-  width: 90%;
-  margin: auto;
+  max-width: 1920px;
+  width: 100%;
+  margin:0  auto;
   padding: 30px 0;
 }
 
@@ -442,7 +444,7 @@ bottom: -5%;
 }
 
 .game_images_container .glider-contain {
-  width: 80%;
+  width: 85%;
   padding: 50px;
   z-index: 9;
 }
@@ -468,6 +470,12 @@ bottom: -5%;
     padding: 0 0 50px 0;
   }
 }
+@media only screen and (max-width:400px){
+  .game_images_container {
+    width: 100%;
+
+  }
+}
 
 .game_images_container .glider .glider-track .glider-slide {
   width: 450px;
@@ -485,6 +493,13 @@ bottom: -5%;
 
 }
 
+@media screen and (max-width:400px) {
+  .game_images_container .glider .glider-track .glider-slide {
+    min-width: 175px;
+  }
+
+}
+
 .game_images_container .glider .glider-track .glider-slide .product-card {
   margin: 0 auto;
 }
@@ -494,6 +509,11 @@ bottom: -5%;
   width: 390px;
 }
 
+@media only screen and (max-width:400px){
+  .game_images_container .glider .glider-track .glider-slide .product-card img{
+    height: 92px;
+  }
+}
 .game_images_container .glider .glider-track .glider-slide .product-card p {
   color: #000000;
   font-size: 17px;
@@ -555,7 +575,7 @@ bottom: -5%;
   background-image: url("../images/games_prev_background.png");
   background-repeat: no-repeat;
   z-index: -1;
-  top: 42px;
+  top: 80px;
   left: -97px;
   width: 316px;
   height: 216px;
@@ -566,7 +586,7 @@ bottom: -5%;
   position: absolute;
   background-image: url("../images/games_next_background.png");
   background-repeat: no-repeat;
-  top: 42px;
+  top: 80px;
   right: -97px;
   width: 316px;
   height: 216px;

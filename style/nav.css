@@ -60,20 +60,25 @@
 @media only screen and (max-width: 425px) {
     .navbar {
         background-size: cover;
-        height: 300px;
+        height: 217px;
     }
     .navbar::after{
         display: none;
         opacity: 0;
     }
 }
+@media only screen and (max-width:375px) {
+    .navbar{
+        height: 275px;
+    }
+}
 
 /* first part of nav (logo,input,buttons) */
 .nav-container {
     max-width: 1920px !important;
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 99;
 
@@ -124,10 +129,14 @@
     clip-path: polygon(100% 31.786%, 96.488% 83.571%, 96.488% 83.571%, 96.227% 86.331%, 95.837% 88.914%, 95.327% 91.294%, 94.71% 93.443%, 93.997% 95.335%, 93.201% 96.943%, 92.331% 98.24%, 91.4% 99.2%, 90.419% 99.796%, 89.4% 100%, 12.771% 100%, 12.771% 100%, 11.752% 99.796%, 10.771% 99.2%, 9.84% 98.24%, 8.971% 96.943%, 8.174% 95.335%, 7.461% 93.443%, 6.844% 91.294%, 6.335% 88.914%, 5.944% 86.331%, 5.683% 83.571%, 2.171% 31.786%, 2.171% 31.786%, 1.993% 26.904%, 2.13% 22.171%, 2.557% 17.675%, 3.25% 13.5%, 4.183% 9.732%, 5.33% 6.457%, 6.666% 3.761%, 8.167% 1.729%, 9.806% .446%, 11.558% 0%, 90.613% 0%, 90.613% 0%, 92.366% .446%, 94.005% 1.729%, 95.505% 3.761%, 96.841% 6.457%, 97.989% 9.732%, 98.921% 13.5%, 99.614% 17.675%, 100.041% 22.171%, 100.179% 26.904%, 100% 31.786%);    
 }
 @media  only screen and (min-width:1429px) 
+{.icon-shape{
+    width: 92px;
+}    
+}
+@media  only screen and (max-width:550) 
 {.search-bar{
     width: 795px;
-}
-    
+}    
 }
 .search-bar::before{
     content:"";
@@ -181,6 +190,7 @@
 @media only screen and (max-width:550px) {
     .nav_buttons{
         padding: 8px 14px;
+        margin-right: 0;
     }
     
 }
@@ -216,12 +226,22 @@ input[type=text] {
 /* secondary nav whch has the links */
 .secondary_nav {
     max-width: 1920px;
-    width: 90%;
+    width: 100%;
     padding-top: 30px;
     gap: 100px;
     z-index: 99;
+    justify-content: center !important;
 }
 
+.secondary_nav .nav-links{
+    gap: 45px;
+}
+@media only  screen and (max-width:1650px)  {
+    .secondary_nav .nav-links{
+        gap: 30px;
+    } 
+    
+}
 @media only screen and (max-width: 1500px) and (min-width: 1470px) {
     .secondary_nav {
         gap: 60px;
@@ -256,6 +276,14 @@ input[type=text] {
     .secondary_nav,
     .nav-container {
         width: 90%;
+    }
+    .nav-container{
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width:375px) {
+    .nav-container{
+        flex-wrap: wrap;
     }
 }
 

@@ -27,15 +27,24 @@ footer::after{
 }
 .footer-container {
     flex-direction: row;
-    max-width: 1928px;
+    max-width: 1920px;
     width: 100%;
     gap: 55px;
     align-items: flex-start;
     text-align: start;
     margin-bottom: 40px;
+    justify-content: space-around !important;
 }
 .input_button, .footer_input{
     display: block;
+}
+
+@media only screen and (max-width:1500px) {
+    .footer-container{
+      justify-content: center  !important;
+      gap: 30px;
+    }
+    
 }
 @media screen and (max-width:1124px) {
     .footer_upper_image{
@@ -206,8 +215,16 @@ align-self: flex-start;
 
 .footer-credendials {
     justify-content: space-between !important;
-    width: 90%;
+    max-width: 1920px;
+    width: 100%;
     border-top: 1px solid rgba(248, 248, 248, 1);
+}
+.footer-credendials h4{
+    margin-left: 40px;
+}
+ .text_help{
+    margin-left: 0;
+    margin-right: 65px;
 }
 
 @media only screen and (max-width: 900px) {
