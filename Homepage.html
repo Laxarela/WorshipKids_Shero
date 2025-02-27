@@ -37,11 +37,6 @@
     <!-- splide -->
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <!-- Slick CSS -->
-    <!-- <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" /> -->
 
 
 
@@ -79,7 +74,7 @@
             <div class="input_button search-bar hide-desktop">
                 <input type="text" name="Find kids video" value="Find kids video" class="input_search" />
             </div>
-            <div class="nav_buttons primary_button gap-20">
+            <div class="nav_buttons icon-shape ">
                 <img src="./images/login.png" alt="user_login" />
                 <img src="./images/shoppingCart.png" alt="shopping_Cart" class="shopping_cart" />
 
@@ -306,7 +301,9 @@
             </div>
 
         </div>
+        <div class="tabs_products_container_2">
         <div class="product-container secondary_tabs_container  flex " id="product-container2"></div>
+        </div>
 
     </div>
 
@@ -516,7 +513,7 @@
                     learning about God fun, interactive, and meaningful.  You can find the best in kids worship videos,
                     Christian worship songs, backgrounds, and church curriculum to make a lasting imprint on the lives
                     of tomorrow's church.</p>
-                <div class=" flex gap-30 justify-content-start social-buttons">
+                <div class=" flex gap-30 justify-content-start social-buttons padding-top-20">
                     <a href="#" class="text-decoration"> <img src="./images/social_media-facebook.png"
                             alt="social media facebook" /></a>
                     <a href="#" class="text-decoration"> <img src="./images/social_media-instagram.png"
@@ -525,22 +522,22 @@
             </div>
             <div class="footer-col-2">
                 <ul>
-                    <li class="footer-text padding-bottom-10 ">On Sale</li>
-                    <li class="footer-text padding-bottom-10 ">About Us</li>
-                    <li class="footer-text padding-bottom-10">WHK KidMin Blog</li>
-                    <li class="footer-text padding-bottom-10">Terms & Conditions</li>
-                    <li class="footer-text padding-bottom-10">Terms & Conditions</li>
-                    <li class="footer-text padding-bottom-10">Contact Us</li>
-                    <li class="footer-text padding-bottom-10">Help</li>
+                    <li class="footer-text padding-bottom-20 ">On Sale</li>
+                    <li class="footer-text padding-bottom-20 ">About Us</li>
+                    <li class="footer-text padding-bottom-20">WHK KidMin Blog</li>
+                    <li class="footer-text padding-bottom-20">Terms & Conditions</li>
+                    <li class="footer-text padding-bottom-20">Terms & Conditions</li>
+                    <li class="footer-text padding-bottom-20">Contact Us</li>
+                    <li class="footer-text padding-bottom-20">Help</li>
                 </ul>
             </div>
             <div class="footer-col-3">
                 <ul>
-                    <li class="footer-text padding-bottom-10 ">Submit Media</li>
-                    <li class="footer-text padding-bottom-10">Streaming Infromation</li>
-                    <li class="footer-text padding-bottom-10">License Agreement</li>
-                    <li class="footer-text padding-bottom-10">CCPA — Do Not Sell My Personal Information</li>
-                    <li class="footer-text padding-bottom-10">California — CCPA Notice</li>
+                    <li class="footer-text padding-bottom-20">Streaming Infromation</li>
+                    <li class="footer-text padding-bottom-20 ">Submit Media</li>
+                    <li class="footer-text padding-bottom-20">License Agreement</li>
+                    <li class="footer-text padding-bottom-20">CCPA — Do Not Sell My Personal Information</li>
+                    <li class="footer-text padding-bottom-20">California — CCPA Notice</li>
                     <li class="footer-text padding-bottom-10"></li>
                     <li class="footer-text padding-bottom-10"></li>
                 </ul>
@@ -584,7 +581,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         centeredSlides: true,
         grabCursor: true,
-        loop: false,
+        loop: true,
         centeredSlides: true, // Center the active slide
         initialSlide: 3,
         navigation: {
@@ -611,22 +608,48 @@ document.addEventListener('DOMContentLoaded', function () {
                 effect: 'slide', 
                 centeredSlides: false,
             },
-            550: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                effect: 'coverflow', 
-                centeredSlides: true,
-            },
-            350: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                effect: 'coverflow', 
-                centeredSlides: true,
-            },
+
+        550: {                   
+            slidesPerView: 1,    
+            spaceBetween: 20,
+            effect: 'slide',    
+        },
+        350: {                     
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+            effect: 'slide',    
+        },
         },
     });
 });
 
+// const swiper = new Swiper('.swiper', {
+//     effect: 'coverflow', // Enable coverflow effect
+//     grabCursor: true,    // Show grab cursor
+//     centeredSlides: true, // Center the active slide
+//     slidesPerView: 4, // Automatically adjust slides per view
+//     loop: true,           // Enable infinite loop
+
+//     navigation: {         // Enable navigation buttons
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     breakpoints: {        // Responsive settings
+
+//         768: {
+//             slidesPerView: 3,
+//             spaceBetween: 20,
+//         },
+//         1024: {
+//             slidesPerView: 3,
+//             spaceBetween: 30,
+//         },
+//         1440: {
+//             slidesPerView: 5,
+//             spaceBetween: 30,
+//         },
+//     }
+// });
 
 
     // testiomonies 
@@ -650,59 +673,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         splide.mount();
     });
-
-    // featured games
-//     document.addEventListener('DOMContentLoaded', function () {
-//     new Glider(document.querySelector('#glide1'), {
-//         slidesToShow: 5,
-//         slidesToScroll: 1,
-//         draggable: true,
-//         // dots: '.dots',
-//         arrows: {
-//             prev: '.glider-prev',
-//             next: '.glider-next'
-//         },
-//         responsive: [
-//             {
-//                 breakpoint: 1024,
-//                 settings: {
-//                     slidesToShow: 4
-//                 }
-//             },
-//             {
-//                 breakpoint: 550,
-//                 settings: {
-//                     slidesToShow: 1,
-//                     draggable: true,
-//                     // dots: true
-//                 }
-//             }
-//         ]
-//     });
-// });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const glide = new Glide('.glide', {
-//         type: 'carousel',
-//         startAt: 2,
-//         perView: 4,
-//         focusAt: 'center',
-//         gap: 30,
-//     });
-
-//     glide.on(['mount.after', 'run'], () => {
-//         document.querySelectorAll('.glide__slide').forEach(slide => {
-//             slide.classList.remove('glide__slide--active');
-//         });
-
-//         const activeIndex = glide.index % document.querySelectorAll('.glide__slide').length;
-//         document.querySelectorAll('.glide__slide')[activeIndex].classList.add('glide__slide--active');
-//     });
-
-//     glide.mount();
-// });
-
-
 </script>
 
 </html>

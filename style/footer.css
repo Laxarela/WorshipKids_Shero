@@ -27,7 +27,8 @@ footer::after{
 }
 .footer-container {
     flex-direction: row;
-    width: 90%;
+    max-width: 1928px;
+    width: 100%;
     gap: 55px;
     align-items: flex-start;
     text-align: start;
@@ -36,10 +37,13 @@ footer::after{
 .input_button, .footer_input{
     display: block;
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1124px) {
     .footer_upper_image{
-        margin: 21px;
+       display: none;
     }
+    
+}
+@media screen and (max-width:1024px) {
     .footer-container{
         padding-top: 20px;
     }
@@ -89,23 +93,38 @@ input[type=email] {
 }
 
 .footer-col-1 {
-    max-width: 319px; 
+    max-width: 355px; 
      width: 100%;
 }
 .footer-col-2{
     max-width: 175px;
   width: 100%;
+  display: flex;
+  align-self: flex-start;
 }
+
 .footer-col-3{
     max-width: 226px;
   width: 100%;
+  display: flex;
+  align-self: flex-start;
+
 }
+
 .footer-col-4{
     max-width: 517px;
     width: 100%;
+  display: flex;
+  flex-direction: column;
+align-self: flex-start;
 }
+@media only screen and (max-width: 1025px) {
+    .footer-col-2, .footer-col-3, .footer-col-4{
+      align-self: center;
+    }  
+  }
 .footer-col-4 .secondary_button::after{
-    right: -19px;
+    right: -18.5px;
     padding: 0;
     height: 56px;
 }
