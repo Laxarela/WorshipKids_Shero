@@ -31,6 +31,14 @@
     } 
 }
 
+@media only screen and (max-width:400px){
+    .game-card{
+        max-width: 390px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
 
 .background-shapes::before {
     content: "";
@@ -148,6 +156,7 @@
         justify-content: center;
 
     }
+
     .lunchbox_shuffle>div{
         gap: 23px;
     }
@@ -306,6 +315,7 @@
     }
     .email_banner .reverse-flex .game-info{
         top: -56px;
+        position: relative;
     }
     .email_banner .reverse-flex .game-info .email_input, .email_banner .reverse-flex .game-info button {
         max-width:311px ;
@@ -503,4 +513,14 @@ align-self: center;
     margin-bottom: 20px;
     max-width: 500px;
     text-align: center;
+}
+
+@media only screen and (max-width:400px){
+  .lunch_box_info{
+        max-width: 380px !important;
+        padding: 10px;
+    }
+    .lunch_box_info .game-description{
+        padding: 0 20px
+    }
 }
