@@ -272,7 +272,7 @@ div#testimonial-slider-track {
 @media screen and (max-width:950px) {
   
   .featured_games {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
 
@@ -289,7 +289,7 @@ div#testimonial-slider-track {
 } */
 
 .featured_games .swiper {
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-top: 20px;
 
@@ -325,7 +325,8 @@ div#testimonial-slider-track {
 }
 @media only screen and (max-width:450px) {
   .featured_games .swiper .swiper-slide{
-    width: 300px !important;
+    width: 142px !important;
+    height: 141px;
     gap: 30px;
   }
 

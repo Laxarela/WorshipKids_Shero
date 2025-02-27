@@ -589,6 +589,24 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
+            350:{
+                slidesPerView: 1.2,
+            spaceBetween: 10,
+            effect: 'slide', 
+            loop: true
+
+            },
+            550: {                   
+            slidesPerView: 3,    
+            spaceBetween: 20,
+            effect: 'slide',    
+        },
+        750: {
+                slidesPerView: 5,
+                spaceBetween: 10,
+                effect: 'slide', 
+                centeredSlides: false,
+            },
             1024: {
                 slidesPerView: 4,
                 spaceBetween: 10,
@@ -602,23 +620,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     slideShadows: true,
                 },
             },
-            750: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                effect: 'slide', 
-                centeredSlides: false,
-            },
 
-        550: {                   
-            slidesPerView: 1,    
-            spaceBetween: 20,
-            effect: 'slide',    
-        },
-        350: {                     
-            slidesPerView: 1.2,
-            spaceBetween: 10,
-            effect: 'slide',    
-        },
+
+ 
         },
     });
 });
